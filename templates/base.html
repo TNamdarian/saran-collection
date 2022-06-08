@@ -45,8 +45,12 @@
     </div>
     {% endif %}
 
-    {% block page_header %}
-    {% endblock %}
+    <!-- Top Bar -->
+    {% include 'partials/_topbar.html' %}
+    <!-- Navbar -->
+    {% include 'partials/_navbar.html' %}
+    <!-- Footer -->
+    {% include 'partials/_footer.html' %}
 
     {% block content %}
     {% endblock %}

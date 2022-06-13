@@ -1,8 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
     <div class="container">
-        <a class="navbar-brand" href="{% url 'index' %}">
-            <h2 class="logo"></h2>
-        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -18,6 +15,9 @@
                     <a class="nav-link" href="{% url 'listings' %}">Featured Listings</a>
                 </li>
             </ul>
+            <a class="text-center m-auto text-white" href="{% url 'index' %}">
+                <h2 class="logo">Saran Collection</h2>
+            </a>
             <ul class="navbar-nav ml-auto">
                 {% if request.user.is_authenticated %}
                 {% if request.user.is_superuser%}

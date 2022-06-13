@@ -5,3 +5,11 @@
 body {
     color: blue;
 }
+
+.social {
+    color: red;
+}
+
+.carousel-item.active {
+    display: block;
+}

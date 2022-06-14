@@ -1,0 +1,33 @@
+[{
+        "pk": 1,
+        "model": "products.category",
+        "fields": {
+            "name": "jumpsuits",
+            "friendly_name": "Suits"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "products.category",
+        "fields": {
+            "name": "dresses",
+            "friendly_name": "Dresses"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "products.category",
+        "fields": {
+            "name": "bags",
+            "friendly_name": "Bags"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "products.category",
+        "fields": {
+            "name": "shoes",
+            "friendly_name": "Shoes"
+        }
+    }
+]

@@ -1,0 +1,132 @@
+[{
+        "pk": 1,
+        "model": "products.product",
+        "fields": {
+            "sku": "hb2021001",
+            "category": 1,
+            "name": "ELLY WIDE LEG JUMPSUIT - SLATE BLUE",
+            "description": "The Elly Jumpsuit in slate blue is our classic silhouette curated to make an elegant statement. A one - shoulder jumpsuit with an asymmetric neckline and simple square cut out to elevate and highlight your form.A fitted bodice flows seamlessly into high - waisted flattering wide leg palazzo trousers to balance the whole look. Completed with a concealed side zip
+            for seamless perfect fit.
+            ",
+            "price": 140.00,
+            “rating”: 4.9,
+            "image": “elly - blue - front.png”
+        }
+    },
+    {
+        "pk": 2,
+        "model": "products.product",
+        "fields": {
+            "sku": "sc2021002",
+            "category": 1,
+            "name": "PARKER JUMPSUIT - LILAC",
+            "description": "Your go-to event favourite is the Parker Jumpsuit in an all-new lilac. Featuring a one-shoulder asymmetric neckline personifies an effortless finesse. Fitted at the waist, this wide-leg jumpsuit's distinctive panel overlay makes this style a visually versatile combination of maxi dress meets jumpsuit. The perfect addition to your occasion wardrobe.",
+            "price": 140.00,
+            “rating”: 4.6,
+            "image": "parker-front.png"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "products.product",
+        "fields": {
+            "sku": "sc2021003",
+            "category": 1,
+            "name": " ELLY WIDE LEG JUMPSUIT - WHITE",
+            "description": "The Elly Jumpsuit in white is our all-new silhouette curated to make an elegant statement.
+            A one - shoulder jumpsuit with an asymmetric neckline and simple square cut out to elevate and highlight your form.A fitted bodice flows seamlessly into high - waisted flattering wide leg palazzo trousers to balance the whole look.
+            Completed with a concealed side zip
+            for a seamless perfect fit.
+            This is the Jumpsuit you have been waiting
+            for.
+            ",
+            "price": 140.00,
+            “rating”: 4.9,
+            "image": "elly-white-front.png"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "products.product",
+        "fields": {
+            "sku": "sc2021004",
+            "category": 2,
+            "name": "ELLY WIDE LEG JUMPSUIT",
+            "description": " The Elly Jumpsuit in Red is our all-new silhouette curated to make an elegant statement.
+            A one - shoulder jumpsuit with an asymmetric neckline and simple square cut out to elevate and highlight your form.A fitted bodice flows seamlessly into high - waisted flattering wide leg palazzo trousers to balance the whole look.
+            Completed with a concealed side zip
+            for a seamless perfect fit.
+            ",
+            "price": 3.95,
+            “rating”: 4.5,
+            "image": "elly-red-front.png"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "products.product",
+        "fields": {
+            "sku": "SC2021005",
+            "category": 2,
+            "name": "CANICE ONE SHOULDER MINI DRESS",
+            "description": "This is a smooth decaf Indonesian coffee with a medium strength profile. Some of the flavours that might come through are Chocolate Brownie and Cherry.",
+            "price": 110.00,
+            “rating”: 4.9,
+            "image": "Candice-front.png"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "products.product",
+        "fields": {
+            "sku": "sc2021006",
+            "category": 2,
+            "name": "CINDY WRAP DRESS",
+            "description": "Introducing the Cindy wrap dress. The perfect day-to-night statement dress with a flattering feminine fit. Peplum frill sleeves and trim add drama to the silhouette, finished off with a tie waist at the back. A perfectly chic addition to your wardrobe.",
+            "price": 110.00,
+            “rating”: 4.9,
+            "image": "cindy-front.png"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "products.product",
+        "fields": {
+            "sku": "sc2021007",
+            "category": 2,
+
+            "name": " VALEN ONE SHOULDER MINI DRESS ",
+
+            "description": " The statement mini of your dreams? The Valen fitted black mini dress is a monochrome fantasy. This one-shoulder piece delicately highlights your figure with understated simplicity. Contrasted with an opulent pleated black and white extended sleeve, with a split on the inner seam, adds movement, fluidity, and drama to your look. Finished with an invisible centre back seam zip. The mini you have been waiting for has arrived. ",
+
+            "price": 5.95,
+
+            “rating”: 4.9,
+
+            "image": "valen-front.png"
+
+        }
+
+    },
+
+    {
+
+        "pk": 8,
+
+        "model": "products.product",
+
+        "fields": {
+            "sku": "sc2021008",
+            "category": 2,
+            "name": "CANDICE ONE SHOULDER MINI DRESS",
+            "description": " The Candice mini dress in red features a double shoulder strap and cut-out back detail. One-shoulder style dress with asymmetric hemline and side split. Fitted mini dress fully lined in a soft-touch lining. Concealed zip fastening to the side. ",
+            "price": 110.00,
+            “rating”: 4.8,
+
+            "image": "Candice-front.png"
+
+        }
+
+    },
+
+    {

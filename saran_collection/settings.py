@@ -43,8 +43,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'pages',
-    'listings',
-    'realtors',
+    'products',
 ]
 
 MIDDLEWARE = [
@@ -57,7 +56,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'teema_real_estate.urls'
+ROOT_URLCONF = 'saran_collection.urls'
 
 TEMPLATES = [
     {

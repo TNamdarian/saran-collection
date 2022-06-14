@@ -15,9 +15,6 @@
                     <a class="nav-link" href="{% url 'listings' %}">Featured Listings</a>
                 </li>
             </ul>
-            <a class="text-center m-auto text-white" href="{% url 'index' %}">
-                <h2 class="logo">Saran Collection</h2>
-            </a>
             <ul class="navbar-nav ml-auto">
                 {% if request.user.is_authenticated %}
                 {% if request.user.is_superuser%}
@@ -44,6 +41,22 @@
                         <i class="fas fa-sign-in-alt"></i>Login</a>
                 </li>
                 {% endif %}
+            </ul>
+            <ul>
+                <li class="list-inline-item">
+                    <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="#">
+                        <div class="text-center">
+                            <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+                            <p class="my-0">
+                                {% if grand_total %}
+                                ${{ grand_total|floatformat:2 }}
+                                {% else %}
+                                $0.00
+                                {% endif %}
+                            </p>
+                        </div>
+                    </a>
+                </li>
             </ul>
         </div>
     </div>

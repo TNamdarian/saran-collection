@@ -29,5 +29,13 @@
             "name": "shoes",
             "friendly_name": "Shoes"
         }
+    },
+    {
+        "pk": 5,
+        "model": "products.category",
+        "fields": {
+            "name": "gift_cards",
+            "friendly_name": "Gift Cards"
+        }
     }
 ]

@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block content %}
+<div class="container-fluid">
+    <!-- Product Image & detail -->
+    <div class="row height-view">
+        <!-- Product Image -->
+        <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+            <div class="image-container my-5">
+                {% if product.image %}
+                <a href="{{ product.image.url }}" target="_blank">
+                    <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                </a>
+                {% else %}
+                <img class="card-img-top img-fluid" src="{% static 'images/no_image.png' %}" alt="{{ product.name }}">
+                {% endif %}
+            </div>
+        </div>
+        <!-- Product Detail -->
+        <div class="col-12 col-md-6 col-lg-4 mt-lg-5">
+            <div class="product-details-container mb-5 mt-md-5">
+                <p class="mb-0">{{ product.name }}</p>
+                <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
+                <div>
+                    {% if product.category %}
+                    <p class="small mt-1 mb-0">
+                        <a class="link-text" href="{% url 'products' %}?category={{ product.category.name }}">
+                            {{ product.category.friendly_name }}
+                        </a>
+                    </p>
+                    {% endif %}
+                </div>
+                {% if request.user.is_superuser %}
+                <small class="ml-3">
+                    <a href="#" class="btn action-btn btn-sm">Edit</a>
+                    <a class="btn alt-action-btn btn-sm" href="#">Delete</a>
+                </small>
+                {% endif %}
+
+                <p class="mt-3">{{ product.description }}</p>
+                <form class="form" action="" method="POST">
+                    {% csrf_token %}
+                    <div class="form-row">
+                        <!-- Buttons & Links -->
+                        <div class="col{% if s %}-12 mt-2{% endif %}">
+                            <a href="{% url 'products' %}" class="btn alt-action-btn mt-5">
+                                <span class="icon">
+                                    <i class="fas fa-chevron-left"></i>
+                                </span>
+                                <span class="">Keep Shopping</span>
+                            </a>
+                            <input type="submit" class="btn action-btn mt-5" value="Add to Cart">
+                        </div>
+                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                    </div>
+            </div>
+            </form>
+            <!-- Additional Information-->
+            <p class="mt-3"><i class="fas fa-lock"></i> Safe & Secure Checkout</p>
+            <p class="mt-3"><i class="fas fa-truck"></i> Free Shipping in Ireland on orders over
+                £{{ free_delivery_threshold }}</p>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock %}

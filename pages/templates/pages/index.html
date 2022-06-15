@@ -7,7 +7,7 @@
         <div class="home-search p-5">
             <div class="overlay p-5">
                 <h1 class="display-4 mb-4">
-                    Property Searching Just Got So Easy
+                    The new collections are here
                 </h1>
                 <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae quas, asperiores eveniet vel nostrum magnam
                     voluptatum tempore! Consectetur, id commodi!</p>
@@ -120,82 +120,47 @@
         </div>
     </div>
 </section>
-<!-- Listings -->
-<section id="listings" class="py-5">
-    <div class="container">
-        <h3 class="text-center mb-3">Latest Listings</h3>
-        <div class="row">
-            <!-- Listing 1 -->
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card listing-preview">
-                    <img class="card-img-top" src="" alt="">
-                    <div class="card-img-overlay">
-                        <h2>
-                            <span class="badge badge-secondary text-white">£490,000</span>
-                        </h2>
+<!-- latest collections -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col py-5">
+            <h3 class="text-center mb-3">The latest collections are here</h3>
+            <hr class="w-50 mb-1">
+        </div>
+    </div>
+    <div class="row">
+        {% for product in products %}
+        <!-- product cards -->
+        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+            <div class="card products-preview">
+                <!-- Product image -->
+                {% if product.image %}
+                <a href="#">
+                    <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                </a>
+                {% else %}
+                <a href="#">
+                    <img class="card-img-top img-fluid" src="{% static 'images/no_image.png' %}" alt="{{ product.name }}">
+                </a>
+                {% endif %}
+                <div class="card-body">
+                    <!-- product name -->
+                    <div class="product-name text-center">
+                        <h4 class="text-primary"></h4>
+                        <p class="text-secondary">{{ product.name }}</p>
                     </div>
-                    <div class="card-body">
-                        <div class="listing-heading text-center">
-                            <h4 class="text-primary">45 Drivewood Circle</h4>
-                            <p>
-                                <i class="fas fa-map-marker text-secondary"></i>Bristol, BR1 2XX</p>
+                    <div class="row py-2 text-secondary">
+                        <div class="col">
+                            <!-- product price -->
+                            <p class="lead mb-0 text-center font-weight-bold">£{{ product.price }}</p>
                         </div>
-                        <hr>
-                        <div class="row py-2 text-secondary">
-                            <div class="col-6">
-                                <i class="fas fa-th-large"></i> Sqft: 2500</div>
-                            <div class="col-6">
-                                <i class="fas fa-car"></i> Garage: 2</div>
-                        </div>
-                        <div class="row py-2 text-secondary">
-                            <div class="col-6">
-                                <i class="fas fa-bed"></i> Bedrooms: 3</div>
-                            <div class="col-6">
-                                <i class="fas fa-bath"></i> Bathrooms: 2</div>
-                        </div>
-                        <hr>
-                        <div class="row py-2 text-secondary">
-                            <div class="col-6">
-                                <i class="fas fa-user"></i> Kyle Brown</div>
-                        </div>
-                        <div class="row text-secondary pb-2">
-                            <div class="col-6">
-                                <i class="fas fa-clock"></i> 5 days ago</div>
-                        </div>
-                        <hr>
-                        <a href="listing.html" class="btn btn-primary btn-block">More Info</a>
                     </div>
+                    <!-- product details -->
+                    <a href="" class="btn btn-primary btn-block">More Info</a>
                 </div>
             </div>
-
         </div>
+        {% endfor %}
     </div>
-</section>
-<section id="services" class="py-5 bg-secondary text-white">
-    <div class="container">
-        <div class="row text-center">
-            <div class="col-md-4">
-                <i class="fas fa-comment fa-4x mr-4"></i>
-                <hr>
-                <h3>Consulting Services</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, debitis nam! Repudiandae, provident iste consequatur
-                    hic dignissimos ratione ea quae.</p>
-            </div>
-            <div class="col-md-4">
-                <i class="fas fa-home fa-4x mr-4"></i>
-                <hr>
-                <h3>Propery Management</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, debitis nam! Repudiandae, provident iste consequatur
-                    hic dignissimos ratione ea quae.</p>
-            </div>
-            <div class="col-md-4">
-                <i class="fas fa-suitcase fa-4x mr-4"></i>
-                <hr>
-                <h3>Renting & Selling</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, debitis nam! Repudiandae, provident iste consequatur
-                    hic dignissimos ratione ea quae.</p>
-            </div>
-        </div>
-    </div>
-</section>
+</div>
 {% endblock %}

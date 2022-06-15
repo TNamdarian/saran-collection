@@ -42,7 +42,7 @@
         "model": "products.product",
         "fields": {
             "sku": "sc2021004",
-            "category": 2,
+            "category": 1,
             "name": "ELLY WIDE LEG JUMPSUIT",
             "description": "The Elly Jumpsuit in Red is our all-new silhouette curated to make an elegant statement. A one - shoulder jumpsuit with an asymmetric neckline and simple square cut out to elevate and highlight your form.A fitted bodice flows seamlessly into high - waisted flattering wide leg palazzo trousers to balance the whole look. Completed with a concealed side zip for a seamless perfect fit.",
             "price": 140,

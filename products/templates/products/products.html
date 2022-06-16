@@ -3,6 +3,35 @@
 
 {% block content %}
 <div class="container-fluid">
+    <!-- Search Bar -->
+    <div class="row p-5">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6">
+            <form method="GET" action="{% url 'products' %}">
+                <div class="input-group input-group-lg">
+                    <input type="text" class="form-control" name="q" placeholder="Search our store" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+                    <div class="input-group-append">
+                        <button class="form-control btn search-btn rounded-2" type="submit" aria-label="Search button">
+                            <span class="icon">
+                                <i class="fas fa-search"></i>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-md-6 order-md-first">
+            <p class="text-muted mt-3 text-center text-md-left">
+                {% if search_term or current_categories or current_sorting != 'None_None' %}
+                <span><a href="{% url 'products' %}" class="link-text">See All Products</a> | </span>
+                {% endif %}
+                {{ products|length }} Products{% if search_term %} found for
+                <strong>"{{ search_term }}"</strong>{% endif %}
+            </p>
+        </div>
+    </div>
     <div class="row">
         <div class="col py-5">
             <h3 class="text-center mb-3">View All</h3>

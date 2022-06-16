@@ -2,124 +2,26 @@
 {% load static %}
 {% block content %}
 <!-- Showcase -->
-<section id="showcase">
-    <div class="container text-center">
-        <div class="home-search p-5">
-            <div class="overlay p-5">
-                <h1 class="display-4 mb-4">
-                    The new collections are here
-                </h1>
-                <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae quas, asperiores eveniet vel nostrum magnam
-                    voluptatum tempore! Consectetur, id commodi!</p>
-                <div class="search">
-                    <form action="search.html">
-                        <!-- Form Row 1 -->
-                        <div class="form-row">
-                            <div class="col-md-4 mb-3">
-                                <label class="sr-only">Keywords</label>
-                                <input type="text" name="keywords" class="form-control" placeholder="Keyword (Pool, Garage, etc)">
-                            </div>
-
-                            <div class="col-md-4 mb-3">
-                                <label class="sr-only">City</label>
-                                <input type="text" name="city" class="form-control" placeholder="City">
-                            </div>
-                            <div class="col-md-4 mb-3">
-                                <label class="sr-only">State</label>
-                                <select name="state" class="form-control">
-                                    <option selected="true" disabled="disabled">County (All)</option>
-                                    <option value="BED">Bedfordshire</option>
-                                    <option value="BER">Berkshire</option>
-                                    <option value="BRI">Bristol</option>
-                                    <option value="BUC">Buckinghamshire</option>
-                                    <option value="CAM">Cambridgeshire</option>
-                                    <option value="CHE">Cheshire</option>
-                                    <option value="COL">City of London[</option>
-                                    <option value="COR">Cornwall[</option>
-                                    <option value="CD">County Durham</option>
-                                    <option value="CUM">Cumbria</option>
-                                    <option value="DER">Derbyshire</option>
-                                    <option value="DEV">Devon</option>
-                                    <option value="DOR">Dorset</option>
-                                    <option value="ERY">East Riding of Yorkshire</option>
-                                    <option value="ES">East Sussex</option>
-                                    <option value="SUS">Sussex</option>
-                                    <option value="GLU">Gloucestershire</option>
-                                    <option value="GL">Greater London[</option>
-                                    <option value="GM">Greater Manchester[1</option>
-                                    <option value="HAM">Hampshire</option>
-                                    <option value="HERE">Herefordshire</option>
-                                    <option value="HERT">Hertfordshire</option>
-                                    <option value="IOW">Isle of Wight</option>
-                                    <option value="KEN">Kent</option>
-                                    <option value="LAN">Lancashire</option>
-                                    <option value="LEC">Leicestershire</option>
-                                    <option value="LIN">Lincolnshire</option>
-                                    <option value="MER">Merseyside[</option>
-                                    <option value="NOR">Norfolk</option>
-                                    <option value="NORY">North Yorkshire</option>
-                                    <option value="NORH">Northamptonshire</option>
-                                    <option value="NUMB">Northumberland</option>
-                                    <option value="NOTT">Nottinghamshire</option>
-                                    <option value="OXFO">Oxfordshire</option>
-                                    <option value="RUT">Rutland</option>
-                                    <option value="SHRO">Shropshire</option>
-                                    <option value="SOM">Somerset</option>
-                                    <option value="SY">South Yorkshire</option>
-                                    <option value="STAF">Staffordshire</option>
-                                    <option value="SUF">Suffolk</option>
-                                    <option value="SUR">Surrey</option>
-                                    <option value="TAW">Tyne and Wear</option>
-                                    <option value="WAR">Warwickshire</option>
-                                    <option value="WM">West Midlands</option>
-                                    <option value="WS">West Sussex</option>
-                                    <option value="WY">West Yorkshire</option>
-                                    <option value="WIL">Wiltshire</option>
-                                    <option value="WOR">Worcestershire</option>
-                                </select>
-                            </div>
-                        </div>
-                        <!-- Form Row 2 -->
-                        <div class="form-row">
-                            <div class="col-md-6 mb-3">
-                                <label class="sr-only">Bedrooms</label>
-                                <select name="bedrooms" class="form-control">
-                                    <option selected="true" disabled="disabled">Bedrooms (All)</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                    <option value="7">7</option>
-                                    <option value="8">8</option>
-                                    <option value="9">9</option>
-                                    <option value="10">10</option>
-                                </select>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <select name="price" class="form-control" id="type">
-                                    <option selected="true" disabled="disabled">Max Price (Any)</option>
-                                    <option value="100000">£100,000</option>
-                                    <option value="200000">£200,000</option>
-                                    <option value="300000">£300,000</option>
-                                    <option value="400000">£400,000</option>
-                                    <option value="500000">£500,000</option>
-                                    <option value="600000">£600,000</option>
-                                    <option value="700000">£700,000</option>
-                                    <option value="800000">£800,000</option>
-                                    <option value="900000">£900,000</option>
-                                    <option value="1000000">£1M+</option>
-                                </select>
-                            </div>
-                        </div>
-                        <button class="btn btn-secondary btn-block mt-4" type="submit">Submit form</button>
-                    </form>
+<div class="container-fluid">
+    <!-- Search Bar -->
+    <div class="row p-5">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6">
+            <form method="GET" action="{% url 'products' %}">
+                <div class="input-group input-group-lg">
+                    <input type="text" class="form-control" name="q" placeholder="Search our store" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+                    <div class="input-group-append">
+                        <button class="form-control btn search-btn rounded-2" type="submit" aria-label="Search button">
+                            <span class="icon">
+                                <i class="fas fa-search"></i>
+                            </span>
+                        </button>
+                    </div>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
-</section>
+</div>
 <!-- latest collections -->
 <div class="container-fluid">
     <div class="row">

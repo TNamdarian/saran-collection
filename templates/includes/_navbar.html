@@ -11,8 +11,16 @@
                 <li {% if 'about' in request.path %} class="nav-item active mr-3" {% else %} class="nav-item mr-3" {% endif %}>
                     <a class="nav-link" href="{% url 'about' %}">About</a>
                 </li>
-                <li {% if 'products' in request.path %} class="nav-item active mr-3" {% else %} class="nav-item mr-3" {% endif %}>
-                    <a class="nav-link" href="{% url 'products' %}">Products</a>
+                <li {% if 'products' in request.path %} class="nav-item active mr-3" {% else %} class="nav-item dropdown" {% endif %}>
+                    <a class="nav-link mr-5" href="#" id="shop-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Shop
+                    </a>
+                    <div class="dropdown-menu border-0" aria-labelledby="shop-link">
+                        <a href="{% url 'products' %}?category=jumpsuits" class="dropdown-item">Jumpsuits</a>
+                        <a href="{% url 'products' %}?category=dresses" class="dropdown-item">Dresses</a>
+                        <a href="{% url 'products' %}?category=bags" class="dropdown-item">Bags</a>
+                        <a href="{% url 'products' %}?category=shoes" class="dropdown-item">Shoes</a>
+                    </div>
                 </li>
             </ul>
             <ul class="navbar-nav ml-auto">

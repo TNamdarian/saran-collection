@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container-fluid">
+    <h3 class="mt-3 mt-lg-5">Shopping bag</h3>
+    <div class="row align-items-center justify-content-center">
+        <!-- Showing the items in the user's shopping bag -->
+        <div class="col-12 my-5">
+            <h4 class="mb-5">Your bag:</h4>
+            {% if bag_items %}
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col"></th>
+                        <th scope="col">Product</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Qty</th>
+                        <th scope="col">Total</th>
+                    </tr>
+                </thead>
+                {% else %}
+                <p class="my-5">No items in your bag yet.</p>
+                <a class="btn submit-btn" href="{% url 'products' %}"> Go shopping!</a>
+                {% endif %}
+        </div>
+    </div>
+</div>
+</div>
+</div>
+{% endblock %}

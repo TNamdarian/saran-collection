@@ -91,9 +91,25 @@
                 <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
                     {% csrf_token %}
                     <div class="form-row">
-                        <!-- Quantity -->
+                        <!-- Size -->
+                        {% with product.has_sizes as s %}
+                        {% if s %}
+                        <div class="col-12">
+                            <p>SIZE</p>
+                            <select class="form-control rounded-0 w-50" name="product_size" id='id_product_size'>
+                                <option value="xs">XS</option>
+                                <option value="s">S</option>
+                                <option value="m" selected>M</option>
+                                <option value="l">L</option>
+                                <option value="xl">XL</option>
+                            </select>
+                        </div>
+                        {% endif %}
+                    </div>
+                    <!-- Quantity -->
+                    <div class="form-row">
                         <div class="col-6">
-                            <div class="form-group mx-auto quantity--selector">
+                            <div class=" form-group mx-auto quantity--selector">
                                 <div class="input-group">
                                     <!-- Decrement Button -->
                                     <div class="input-group-prepend">
@@ -111,19 +127,20 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- Buttons & Links -->
-                            <div class="col{% if s %}-12 mt-2{% endif %}">
-                                <a href="{% url 'products' %}" class="btn alt-action-btn mt-5">
-                                    <span class="icon">
-                                        <i class="fas fa-chevron-left"></i>
-                                    </span>
-                                    <span class="">Keep Shopping</span>
-                                </a>
-                                <input type="submit" class="btn action-btn mt-5" value="Add to bag">
-                            </div>
-                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         </div>
                     </div>
+                    <!-- Buttons & Links -->
+                    <div class="col{% if s %}-12 mt-2{% endif %}">
+                        <a href="{% url 'products' %}" class="btn alt-action-btn mt-5">
+                            <span class="icon">
+                                <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="">Keep Shopping</span>
+                        </a>
+                        <input type="submit" class="btn action-btn mt-5" value="Add to bag">
+                    </div>
+                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                    {% endwith %}
                 </form>
                 <!-- Additional Information-->
                 <p class="mt-3"><i class="fas fa-lock"></i> Safe & Secure Checkout</p>

@@ -13,6 +13,7 @@
                     <tr>
                         <th scope="col"></th>
                         <th scope="col">Product</th>
+                        <th class="my-0">Size</th>
                         <th scope="col">Price</th>
                         <th scope="col">Qty</th>
                         <th scope="col">Total</th>
@@ -29,6 +30,9 @@
                     </td>
                     <td>
                         <p>{{item.product.name }}</p>
+                    </td>
+                    <td>
+                        <p>{% if item.product.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}</p>
                     </td>
                     <td>
                         <p>£{{item.product.price }}</p>

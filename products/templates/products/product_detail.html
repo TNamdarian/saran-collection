@@ -151,3 +151,8 @@
     </div>
 </div>
 {% endblock %}
+{% block postloadjs %}
+<!-- Link to script for handling the increment/decrement quantity buttons on the form -->
+{{ block.super }}
+{% include 'products/includes/quantity_input_script.html' %}
+{% endblock %}

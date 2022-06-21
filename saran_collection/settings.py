@@ -163,4 +163,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Setup made following the Boutique Ado walkthorugh project)
 FREE_DELIVERY_THRESHOLD = 50
-STANDARD_DELIVERY_COST = 10
+STANDARD_DELIVERY_PERCENTAGE = 10

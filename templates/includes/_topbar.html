@@ -1,15 +1,15 @@
 <div id="carouselContent" class="carousel slide" data-ride="carousel">
     <div class="container">
-        <div class="carousel-inner text-center text-black m-auto" role="listbox">
+        <div class="carousel-inner text-center m-auto" role="listbox">
             <div class="carousel-item active text-center p-4">
-                <div class="user_text mb-3">
+                <div class="user_text">
                     <h6 class="mbr-fonts-style display-7">
                         Free delivery on orders over £{{ free_delivery_threshold }}!
                     </h6>
                 </div>
             </div>
             <div class="carousel-item text-center p-4">
-                <div class="user_text mb-3">
+                <div class="user_text">
                     <h6 class="mbr-fonts-style display-7">
                         Join the community now!
                     </h6>
@@ -20,10 +20,12 @@
 </div>
 <div class="row">
     <div class="col">
-        <div class="text-centre">
-            <a class="text-center m-auto text-black" href="{% url 'index' %}">
-                <h2 class="logo">Saran Collection</h2>
-            </a>
+        <!-- Logo -->
+        <div class="container-fluid font-antonio text-center green-section">
+            <div class="row">
+                <h2 class="col-12 ml-auto text-uppercase logo" href="{% url 'index' %}">Saran Collection
+                </h2>
+            </div>
         </div>
     </div>
 </div>

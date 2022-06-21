@@ -1,17 +1,109 @@
-.logo {
-    background: url('/media/1.jpeg') no-repeat;
+/* -------------------------------------------------- Common css codes */
+.green-section {
+    background-color: var(--green);
 }
 
-body {
-    color: blue;
+.pink-section {
+    background-color: var(--pink);
 }
 
-.social {
-    color: red;
+.lightgrey-section {
+    background-color: var(--lightgrey);
 }
 
-.carousel-item.active {
-    display: block;
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.font-antonio {
+    font-family: var(--Antonio);
+}
+
+/* -------------------------------------------------- Root Variables*/
+:root {
+    --Antonio: 'Antonio', sans-serif;
+    /* font-family: var(--Antonio); */
+    --green: #295939;
+    color: var(--green);
+    /*previious color #81b214*/
+    --pink: #E9B0DF;
+    /* color: var(--bggreen); */
+    --lightgrey: #E8EFEB;
+    /* color: var(--lightgrey); */
+}
+
+html {
+    height: 100%;
+}
+
+.btn-black {
+    background: black;
+    color: white;
+}
+
+.btn-outline-black {
+    background: white;
+    color: black !important;
+    /* use important to override link colors for <a> elements */
+    border: 1px solid black;
+}
+
+.btn-outline-black:hover,
+.btn-outline-black:active,
+.btn-outline-black:focus {
+    background: black;
+    color: white !important;
+}
+
+.shop-now-button:hover,
+.shop-now-button:active,
+.shop-now-button:focus,
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+    background: #222;
+    color: white;
+}
+
+.text-black {
+    color: #000 !important;
+}
+
+.border-black {
+    border: 1px solid black !important;
+}
+
+.bg-black {
+    background: #000 !important;
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: white;
+    z-index: -1;
+}
+
+a.category-badge>span.badge:hover {
+    background: #212529 !important;
+    color: #fff !important;
+}
+
+.btt-button {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.btt-link,
+.update-link,
+.remove-item {
+    cursor: pointer;
 }
 
 /* ------------------------------- bootstrap toasts */
@@ -68,4 +160,82 @@ body {
     height: 100px;
     overflow-x: hidden;
     overflow-y: auto;
+}
+
+/* ------------------------------- fotetr */
+footer #main-footer {
+    background-color: #CE7D00;
+}
+
+.social a {
+    margin-right: 0.4rem;
+    color: var(--green);
+}
+
+.social i {
+    font-size: 130%;
+    color: #E9B0DF;
+    padding-right: 3%;
+    padding-left: 3%;
+}
+
+.social {
+    padding-top: 23px;
+}
+
+.social i:hover {
+    color: var(--lightgrey);
+}
+
+.fas.icon {
+    font-size: 80%;
+    color: var(--pink);
+}
+
+.contact p {
+    margin-bottom: 0px;
+    padding-top: 20px;
+}
+
+.copyright {
+    margin-top: 40px;
+    font-size: 12px;
+}
+
+.site-footer__linklist {
+    list-style: none;
+}
+
+li a {
+    color: var(--pink);
+    font-size: 14px;
+}
+
+li a:hover {
+    color: var(--lightgrey);
+    text-decoration: none;
+}
+
+/* ------------------------------- navbar */
+#carouselContent {
+    background-color: var(--lightgrey)
+}
+
+.carousel-item h6 {
+    color: var(--green)
+}
+
+.logo {
+    color: var(--pink);
+    background-color: var(--green);
+    font-size: 42px;
+    font-weight: 300;
+    margin-bottom: 0;
+    padding: 40px;
+}
+
+h2.logo:hover {
+    color: var(--lightgrey);
+    text-decoration: none;
+    cursor: pointer;
 }

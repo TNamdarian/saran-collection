@@ -3,6 +3,18 @@
 {% load bag_tools %}
 
 {% block content %}
+<!-- Checkout Progress bar-->
+<!-- Original code with modifications from: https://bbbootstrap.com/snippets/bootstrap-5-ecommerce-checkout-form-progress-bar-44177913-->
+<div class="progresses lightgrey py-4">
+    <ol class="d-flex align-items-center justify-content-between">
+        <li id="step-1-bag"></li>
+        <li id="step-2-bag"></li>
+        <li id="step-3-bag"></li>
+    </ol>
+    <div class="progress">
+        <div role="progressbar" style="width: 50%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+</div>
 <div class="container-fluid lightgrey-section mb-2">
     <div class="row">
         <div class="col">

@@ -1,0 +1,86 @@
+/* -------------------------------------------------- Common css codes */
+.green-section {
+    background-color: var(--green);
+}
+
+.pink-section {
+    background-color: var(--pink);
+}
+
+.lightgrey-section {
+    background-color: var(--lightgrey);
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.font-antonio {
+    font-family: var(--Antonio);
+}
+
+/* -------------------------------------------------- Root Variables*/
+:root {
+    --green: #295939;
+    color: var(--green);
+    /*previious color #81b214*/
+    --pink: #E9B0DF;
+    /* color: var(--bggreen); */
+    --lightgrey: #E8EFEB;
+    /* color: var(--lightgrey); */
+    --lightgreen: #ADEECF;
+    /* color: var(--lightgreen); */
+}
+
+.StripeElement,
+.stripe-style-input {
+    box-sizing: border-box;
+    height: 40px;
+    padding: 10px 12px;
+    border: 1px solid transparent;
+    border-radius: 0px;
+    background-color: var(--lightgrey);
+    box-shadow: 0 1px 3px 0 var(--lightgreen);
+    -webkit-transition: box-shadow 150ms ease;
+    transition: box-shadow 150ms ease;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.StripeElement--focus,
+.stripe-style-input:focus,
+.stripe-style-input:active {
+    box-shadow: 0 1px 3px 0 var(--lightgrey);
+}
+
+.StripeElement--webkit-autofill {
+    background-color: var(--bgWhite) !important;
+}
+
+.stripe-style-input::placeholder {
+    color: var(--green);
+    color: var(--green);
+}
+
+.fieldset-label {
+    position: relative;
+    right: .5rem;
+}
+
+#payment-form .form-control,
+#card-element {
+    color: var(--lightgrey);
+    border: 1px solid var(--lightgrey);
+}
+
+select,
+select option {
+    color: var(--lightgrey);
+}
+
+select:invalid,
+select option[value=""] {
+    color: var(--pink) !important;
+}

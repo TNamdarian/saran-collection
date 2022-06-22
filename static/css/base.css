@@ -106,7 +106,7 @@ a.category-badge>span.badge:hover {
     cursor: pointer;
 }
 
-/* ------------------------------- bootstrap toasts */
+/* ------------------------------- Bootstrap Toasts */
 
 .message-container {
     position: fixed;
@@ -162,7 +162,7 @@ a.category-badge>span.badge:hover {
     overflow-y: auto;
 }
 
-/* ------------------------------- fotetr */
+/* ------------------------------- Footer */
 footer #main-footer {
     background-color: #CE7D00;
 }
@@ -216,7 +216,7 @@ li a:hover {
     text-decoration: none;
 }
 
-/* ------------------------------- navbar */
+/* ------------------------------- Navbar */
 #carouselContent {
     background-color: var(--lightgrey)
 }
@@ -238,4 +238,144 @@ h2.logo:hover {
     color: var(--lightgrey);
     text-decoration: none;
     cursor: pointer;
+}
+
+/* --- PROGRESS BAR --- */
+/* Original code with modifications from: https://bbbootstrap.com/snippets/bootstrap-5-ecommerce-checkout-form-progress-bar-44177913 */
+.progresses {
+    position: relative;
+    max-width: 70%;
+    margin: auto
+}
+
+.progresses ol {
+    list-style: none;
+    padding: 0
+}
+
+.progresses ol li {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--Light);
+    z-index: 200;
+    position: relative
+}
+
+.progresses ol li::after {
+    position: absolute;
+    top: 35px;
+    left: -15px;
+    font-size: 0.8rem;
+    width: 90px
+}
+
+/* Bag Steps */
+#step-1-bag {
+    background-color: var(--green);
+}
+
+#step-1-bag::after {
+    content: "Bag";
+    font-size: 18px;
+    font-weight: 700;
+    padding-left: 15px;
+}
+
+#step-2-bag::after {
+    content: "Checkout";
+    font-size: 15px;
+}
+
+#step-3-bag::after {
+    content: "Confirmation";
+    font-size: 15px;
+}
+
+.progresses .progress {
+    height: 0.8rem;
+    width: 100%;
+    top: 33px;
+    position: absolute;
+    background-color: var(--lightgrey);
+    border-radius: 10px
+}
+
+.block-img-bag {
+    max-width: 90%;
+}
+
+/* Checkout Steps */
+#step-1-checkout {
+    background-color: var(--green);
+}
+
+#step-1-checkout::after {
+    content: "Bag";
+    font-size: 16px;
+    padding-left: 15px;
+}
+
+#step-2-checkout {
+    background-color: var(--green);
+}
+
+#step-2-checkout::after {
+    content: "Checkout";
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--lightgrey);
+}
+
+#step-3-checkout::after {
+    content: "Confirmation";
+    font-size: 15px;
+}
+
+.checkout-progressbar {
+    background-color: var(--lightgreen);
+}
+
+.block-img-success {
+    max-width: 80%;
+}
+
+/* Confirmation Steps */
+#step-1-success {
+    background-color: var(--green);
+}
+
+#step-1-success::after {
+    content: "Cart";
+    font-size: 16px;
+    padding-left: 15px;
+}
+
+#step-2-success {
+    background-color: var(--green);
+}
+
+#step-2-success::after {
+    content: "Checkout";
+    font-size: 16px;
+    padding-left: 15px;
+}
+
+#step-3-success {
+    background-color: var(--green);
+}
+
+#step-3-success::after {
+    content: "Confirmation";
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--green);
+}
+
+.success-progressbar {
+    background-color: var(--lightgreen);
+}
+
+#success-progresses #success-progess {
+    background-color: var(--lightgreen);
 }

@@ -21,7 +21,6 @@
     </div>
 </div>
 <!-- Heading -->
-<div class="overlay"></div>
 <div class="container">
     <div class="row">
         <div class="col text-center mt-5">
@@ -114,7 +113,8 @@
                     <div class="mb-3" id="card-element"></div>
                     <!-- Used to display form errors -->
                     <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
-
+                    <!-- Pass the client secret to the view so we can get the payment intent id -->
+                    <input type="hidden" value="{{ client_secret }}" name="client_secret">
                 </fieldset>
                 <div class="submit-button text-right mt-5 mb-2">
                     <a href="{% url 'view_bag' %}" class="btn alt-action-btn btn-lg">
@@ -140,12 +140,4 @@
         </div>
     </div>
 </main>
-<!-- Loading Overlay -->
-<div id="loading-overlay">
-    <div class="text-light logo-font loading-spinner">
-        <span class="icon">
-            <i class="fas fa-3x fa-sync-alt fa-spin"></i>
-        </span>
-    </div>
-</div>
 {% endblock %}

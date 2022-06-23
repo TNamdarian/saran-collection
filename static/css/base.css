@@ -301,10 +301,6 @@ h2.logo:hover {
     border-radius: 10px
 }
 
-.block-img-bag {
-    max-width: 90%;
-}
-
 /* Checkout Steps */
 #step-1-checkout {
     background-color: var(--green);
@@ -336,11 +332,11 @@ h2.logo:hover {
     background-color: var(--lightgreen);
 }
 
+/* Confirmation Steps */
 .block-img-success {
     max-width: 80%;
 }
 
-/* Confirmation Steps */
 #step-1-success {
     background-color: var(--green);
 }

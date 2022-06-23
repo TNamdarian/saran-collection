@@ -52,6 +52,25 @@
 .StripeElement--focus,
 .stripe-style-input:focus,
 .stripe-style-input:active {
+    box-shadow: 0 1px 3px 0 var(--lightgreen);
+}
+
+.StripeElement--webkit-autofill {
+    background-color: var(--lightgrey) !important;
+}
+
+.stripe-style-input::placeholder {
+    color: var(--green);
+}
+
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.StripeElement--focus,
+.stripe-style-input:focus,
+.stripe-style-input:active {
     box-shadow: 0 1px 3px 0 var(--lightgrey);
 }
 

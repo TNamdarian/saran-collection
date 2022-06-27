@@ -123,7 +123,7 @@
                     <!-- Used to display form errors -->
                     <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
                     <!-- Pass the client secret to the view so we can get the payment intent id -->
-                    <input type="hidden" value="" name="client_secret">
+                    <input type="hidden" value="{{ client_secret }}" name="client_secret">
                 </fieldset>
                 <div class="submit-button text-right mt-5 mb-2">
                     <a href="{% url 'view_bag' %}" class="btn alt-action-btn btn-lg">
@@ -151,7 +151,7 @@
 </main>
 {% endblock %}
 <!-- Loading Overlay -->
-<div id="loading-overlay">
+<div id=" loading-overlay">
     <div class="text-light logo-font loading-spinner">
         <span class="icon">
             <i class="fas fa-3x fa-sync-alt fa-spin"></i>

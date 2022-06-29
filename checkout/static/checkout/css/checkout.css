@@ -101,7 +101,7 @@ select option {
 
 select:invalid,
 select option[value=""] {
-    color: var(--pink) !important;
+    color: var(--green) !important;
 }
 
 #loading-overlay {

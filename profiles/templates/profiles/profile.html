@@ -58,7 +58,7 @@
                                     {% endfor %}
                                 </ul>
                             </td>
-                            <td>€{{ order.grand_total }}</td>
+                            <td>£{{ order.grand_total }}</td>
                         </tr>
                         {% endfor %}
                     </tbody>
@@ -69,7 +69,6 @@
             <div class="center">
                 <a href="{% url 'products' %}" class="btn action-btn">Go to Shop</a>
             </div>
-
             {% endif %}
         </div>
     </div>

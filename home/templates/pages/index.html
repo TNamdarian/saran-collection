@@ -65,4 +65,25 @@
         {% endfor %}
     </div>
 </div>
+<!-- Contact Form-->
+<main class="container">
+    <div class="row pt-3">
+        <div class="col-12 col-md-6">
+            <img class="block-connect-img" src="{% static 'images/contact_us_page.png' %}" alt="">
+        </div>
+        <div class="col-12 col-md-6">
+            <form id="contact-form" method="POST">
+                {% csrf_token %}
+                <fieldset class="form-group mt-3">
+                    <h3 class="">Get in touch</h3>
+                    <p>Got a question, comment or just want to say hi? We would love to hear from you!</p>
+                    {{ form|crispy }}
+                </fieldset>
+                <div class="form-actions form-group mt-4 text-end">
+                    <button class="btn action-btn btn-lg" type="submit">Send</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
 {% endblock %}

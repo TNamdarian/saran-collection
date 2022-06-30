@@ -107,7 +107,6 @@ a.category-badge>span.badge:hover {
 }
 
 /* ------------------------------- Bootstrap Toasts */
-
 .message-container {
     position: fixed;
     top: 72px;

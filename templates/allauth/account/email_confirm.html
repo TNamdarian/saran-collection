@@ -1,31 +1,47 @@
 {% extends "account/base.html" %}
+{% load static %}
 
 {% load i18n %}
 {% load account %}
 
 {% block head_title %}{% trans "Confirm E-mail Address" %}{% endblock %}
 
+{% block extra_title %}
+- Confirm Email Address
+{% endblock %}
 
 {% block content %}
-<h1>{% trans "Confirm E-mail Address" %}</h1>
-
-{% if confirmation %}
-
-{% user_display confirmation.email_address.user as user_display %}
-
-<p>{% blocktrans with confirmation.email_address.email as email %}Please confirm that <a href="mailto:{{ email }}">{{ email }}</a> is an e-mail address for user {{ user_display }}.{% endblocktrans %}</p>
-
-<form method="post" action="{% url 'account_confirm_email' confirmation.key %}">
-{% csrf_token %}
-    <button type="submit">{% trans 'Confirm' %}</button>
-</form>
-
-{% else %}
-
-{% url 'account_email' as email_url %}
-
-<p>{% blocktrans %}This e-mail confirmation link expired or is invalid. Please <a href="{{ email_url }}">issue a new e-mail confirmation request</a>.{% endblocktrans %}</p>
-
-{% endif %}
-
+<div class="container">
+    <!-- Heading-->
+    <div class="row">
+        <div class="col text-center mt-3">
+            <h2 class="logo-font">{% trans "Confirm E-mail Address" %}</h2>
+            <hr class="w-100 mb-1">
+        </div>
+    </div>
+</div>
+<section class="container">
+    <div class="row height-view">
+        <div class="col-12 col-md-6">
+            <img src="{% static 'images/login.jpg' %}" alt="Coffee, spoon and plant on table" class="block-img">
+        </div>
+        <div class="col-12 col-md-6 mt-5 mb-5">
+            {% if confirmation %}
+            <h3 class="block-heading ">Confirmation</h3>
+            {% user_display confirmation.email_address.user as user_display %}
+            <p>{% blocktrans with confirmation.email_address.email as email %}Please confirm that {{ email }} is an
+                e-mail address for user
+                <strong>{{ user_display }}.{% endblocktrans %}</strong>
+            </p>
+            <form method="post" action="{% url 'account_confirm_email' confirmation.key %}">
+                {% csrf_token %}
+                <button type="submit" class="btn action-btn">{% trans 'Confirm' %}</button>
+            </form>
+            {% else %}
+            {% url 'account_email' as email_url %}
+            <p>{% blocktrans %}This e-mail confirmation link expired or is invalid. Please <a href="{{ email_url }}">issue a new e-mail confirmation request</a>.{% endblocktrans %}</p>
+            {% endif %}
+        </div>
+    </div>
+</section>
 {% endblock %}

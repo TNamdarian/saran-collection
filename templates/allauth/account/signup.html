@@ -1,21 +1,69 @@
 {% extends "account/base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% crispy example_form example_form.helper %}
 
 {% load i18n %}
+{% load account socialaccount %}
 
 {% block head_title %}{% trans "Signup" %}{% endblock %}
 
+{% block extra_title %}
+- Register
+{% endblock %}
+
 {% block content %}
-<h1>{% trans "Sign Up" %}</h1>
-
-<p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
-
-<form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
-  {% csrf_token %}
-  {{ form.as_p }}
-  {% if redirect_field_value %}
-  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-  {% endif %}
-  <button type="submit">{% trans "Sign Up" %} &raquo;</button>
-</form>
-
+<div class="container">
+    <!-- Heading-->
+    <div class="row">
+        <div class="col text-center mt-3">
+            <h2 class="logo-font">{% trans "Register" %}</h2>
+            <hr class="w-100 mb-1">
+        </div>
+    </div>
+</div>
+<section class="container">
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <h3 class="block">{% blocktrans %}Your Information{% endblocktrans %}
+            </h3>
+            <!-- Form -->
+            <form class="signup pt-1" id="signup_form" method="post" action="{% url 'account_signup' %}">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <br>
+                <small><em><strong>Username tip:</strong> Your username must be at least 4 characters.</em></small>
+                <br>
+                <small><em><strong>Password tip:</strong> Your password must contain at least 8 characters, a combination of numbers & letters, not be similar to your email address and not a common combination like (abcdefgh or 12345678). You can include special characters but it is not required.</em></small>
+                {% if redirect_field_value %}
+                <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" class="pt-1" />
+                {% endif %}
+                <div class="pt-0 mb-3">
+                    <button type="submit" class="btn button-text action-btn mt-4 mb-1">{% trans "Register" %} <i class="fas fa-chevron-right ms-3"></i></button>
+                </div>
+                <p>{% blocktrans %}We will never share your information with anyone! Already Registered? <a href="{{ login_url }}" class="link-text">Log In here</a>.{% endblocktrans %}</p>
+            </form>
+        </div>
+    </div>
+</section>
+<hr>
+<!-- Registration section -->
+<div class="container">
+    <div class="row h-100">
+        <div class="col-12 col-md-6 block">
+            <h2 class="block-heading">Have you visited our shop yet?
+            </h2>
+            <p class="information">
+                Simply log in, to check it out!
+            </p>
+            <p>
+                View our latest colleciton here.
+            </p>
+            <a class="btn btn-lg subscription-button mb-3" href="{% url 'account_signup' %}" role="button">Visit the shop</a>
+        </div>
+        <div class="col-sm-12 col-md-6 p-5 ">
+            <img src="{% static 'images/saran_collection_logo.png' %}" class="section-img" alt="Saran Colleciton">
+        </div>
+    </div>
+</div>
 {% endblock %}

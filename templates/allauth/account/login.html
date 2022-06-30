@@ -1,46 +1,78 @@
 {% extends "account/base.html" %}
+{% load static %}
+{%load crispy_forms_tags %}
 
 {% load i18n %}
 {% load account socialaccount %}
 
-{% block head_title %}{% trans "Sign In" %}{% endblock %}
+{% block head_title %}{% trans "Login" %}{% endblock %}
 
 {% block content %}
-
-<h1>{% trans "Sign In" %}</h1>
-
-{% get_providers as socialaccount_providers %}
-
-{% if socialaccount_providers %}
-<p>{% blocktrans with site.name as site_name %}Please sign in with one
-of your existing third party accounts. Or, <a href="{{ signup_url }}">sign up</a>
-for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
-
-<div class="socialaccount_ballot">
-
-  <ul class="socialaccount_providers">
-    {% include "socialaccount/snippets/provider_list.html" with process="login" %}
-  </ul>
-
-  <div class="login-or">{% trans 'or' %}</div>
-
+<div class="container">
+    <!-- Heading-->
+    <div class="row">
+        <div class="col text-center mt-3">
+            <h2 class="logo-font">{% trans "Login" %}</h2>
+            <hr class="w-100 mb-1">
+        </div>
+    </div>
 </div>
-
-{% include "socialaccount/snippets/login_extra.html" %}
-
-{% else %}
-<p>{% blocktrans %}If you have not created an account yet, then please
-<a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
-{% endif %}
-
-<form class="login" method="POST" action="{% url 'account_login' %}">
-  {% csrf_token %}
-  {{ form.as_p }}
-  {% if redirect_field_value %}
-  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-  {% endif %}
-  <a class="button secondaryAction" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
-  <button class="primaryAction" type="submit">{% trans "Sign In" %}</button>
-</form>
-
+<section class="container">
+    <div class="row">
+        <div class="col-12 col-md-6">
+            {% get_providers as socialaccount_providers %}
+            {% if socialaccount_providers %}
+            <p>{% blocktrans with site.name as site_name %}Please sign in with one of your existing third party
+                accounts.
+                Or, <a href="{{ signup_url }}">Register</a> for a {{ site_name }} account and sign in
+                below:{% endblocktrans %}
+            </p>
+            <div class="socialaccount_ballot">
+                <ul class="socialaccount_providers">
+                    {% include "socialaccount/snippets/provider_list.html" with process="login" %}
+                </ul>
+                <div class="login-or">{% trans 'or' %}</div>
+            </div>
+            {% include "socialaccount/snippets/login_extra.html" %}
+            {% else %}
+            <h3 class="block">{% blocktrans %}Your Information{% endblocktrans %}
+            </h3>
+            {% endif %}
+            <form class="login mx-auto mt-3 text-start pt-1" method="POST" action="{% url 'account_login' %}">
+                {% csrf_token %}
+                {{ form|crispy }}
+                {% if redirect_field_value %}
+                <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" class="pt-1" />
+                {% endif %}
+                <button class="btn button-text action-btn mt-4 mb-1 " type="submit">{% trans "Login" %} <i class="fas fa-chevron-right ms-3"></i></button>
+                <div class="pt-0 mb-3">
+                    <a class="button secondaryAction link-text" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
+                </div>
+                <p>{% blocktrans %}Don't have an account?
+                    <a href="{{ signup_url }}" class="link-text">Create an account here!</a>{% endblocktrans %}
+                </p>
+            </form>
+        </div>
+    </div>
+</section>
+<hr>
+<!-- Registration section -->
+<div class="container">
+    <div class="row h-100">
+        <div class="col-12 col-md-6 block">
+            <h2 class="block-heading">Have you visited our shop yet?
+            </h2>
+            <p class="information">
+                Simply log in, to check it out!
+            </p>
+            <p>
+                View our latest collction here.
+            </p>
+            <a class="btn btn-lg subscription-button" href="{% url 'index' %}" role="button">Visit Saran Collection</a>
+        </div>
+        <div class="col-sm-12 col-md-6 p-5 ">
+            <img src="{% static 'images/saran_collection_logo.png' %}" class="section-img" alt="Saran Collection">
+        </div>
+    </div>
+</div>
 {% endblock %}

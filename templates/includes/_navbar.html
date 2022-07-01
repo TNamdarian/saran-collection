@@ -48,8 +48,8 @@
                 {% if request.user.is_authenticated %}
                 {% if request.user.is_superuser%}
                 <li class="nav-item mr-3">
-                    <a class="nav-link" href="">
-                        <i class="fas fa-user-plus"></i>Dashboard</a>
+                    <a class="nav-link" href="{% url 'add_product' %}">
+                        <i class="fas fa-user-plus"></i>Product Management</a>
                 </li>
                 {% endif %}
                 <li class="nav-item mr-3">

@@ -17,7 +17,7 @@
         <div class="col-12">
             <form method="POST" action="{% url 'add_product' %}" class="form mb-2" enctype="multipart/form-data">
                 {% csrf_token %}
-                {% form | crispy %}
+                {{ form | crispy }}
                 <div class="form-buttons" style="float:right;">
                     <a class="btn alt-action-btn mt-3 mb-5" href="{% url 'products' %}">Cancel</a>
                     <button class="btn action-btn mt-3 mb-5" type="submit">Add Product</button>

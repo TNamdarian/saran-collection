@@ -84,8 +84,8 @@
                 </div>
                 {% if request.user.is_superuser %}
                 <small class="ml-3">
-                    <a href="#" class="btn action-btn btn-sm">Edit</a>
-                    <a class="btn alt-action-btn btn-sm" href="#">Delete</a>
+                    <a href="{% url 'edit_product' product.id %}" class="btn action-btn btn-sm">Edit</a>
+                    <a class="btn alt-action-btn btn-sm" href="{% url 'delete_product' product.id %}">Delete</a>
                 </small>
                 {% endif %}
                 <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">

@@ -3,9 +3,15 @@ from .models import UserProfile
 
 
 class UserProfileForm(forms.ModelForm):
+    """
+    Profiles Form to render the fields in the form for User Profile
+    """
     class Meta:
+        """
+        Selecting the fields to use.
+        """
         model = UserProfile
-        fields = ('user',)
+        exclude = ('user',)
 
     def __init__(self, *args, **kwargs):
         """

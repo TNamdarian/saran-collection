@@ -1,5 +1,5 @@
 """
-ASGI config for teema_real_estate project.
+ASGI config for saran_collection project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'teema_real_estate.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'saran_collection.settings')
 
 application = get_asgi_application()

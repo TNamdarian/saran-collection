@@ -1,5 +1,5 @@
 """
-WSGI config for teema_real_estate project.
+WSGI config for saran_collection project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 

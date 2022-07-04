@@ -1,1 +1,1 @@
-web: guicorn saran_collection.wsgi:application
+web: gunicorn saran_collection.wsgi:application

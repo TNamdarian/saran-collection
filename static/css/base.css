@@ -405,3 +405,68 @@ h2.logo:hover {
     border-color: #dc3545;
     border-radius: 0;
 }
+
+/* --- LANDING SECTION --- */
+
+/* Smaller Screens */
+.landing1,
+.landing2 {
+    min-width: 100%;
+    padding-left: 2rem;
+    padding-right: 8rem;
+    padding-top: 5rem;
+    padding-bottom: 8px;
+    min-height: 90vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
+.landing1 {
+    background: url('/static/images/home/pexels-juan.jpg') no-repeat center center;
+    margin-bottom: 90px;
+}
+
+.landing2 {
+    background: url('/static/images/home/pexels-cottonbro.jpg') no-repeat center center;
+}
+
+
+/* For Tablets */
+@media only screen and (min-width: 768px) {
+
+    .landing1,
+    .landing2 {
+        padding-top: 12.5rem;
+        padding-left: 10rem;
+        min-height: 90vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 80%;
+    }
+}
+
+/* For Desktops */
+@media only screen and (min-width: 1000px) {
+
+    .landing1,
+    .landing2 {
+        padding-top: 12.5rem;
+        padding-left: 10rem;
+    }
+}
+
+/* For Large 4K Screens */
+@media only screen and (min-width: 2560px) {
+
+    .landing1,
+    .landing2 {
+        padding-top: 12.5rem;
+        padding-left: 10rem;
+    }
+}
+
+/* --- LANDING PAGE ROW--- */
+.landing-row {
+    padding-top: 100px;
+}

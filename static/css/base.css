@@ -140,7 +140,7 @@ footer #main-footer {
 
 .social i {
     font-size: 130%;
-    color: #E9B0DF;
+    color: var(--pink);
     padding-right: 3%;
     padding-left: 3%;
 }
@@ -168,13 +168,13 @@ footer #main-footer {
     font-size: 12px;
 }
 
-.site-footer__linklist {
+.site-footer-linklist {
     list-style: none;
 }
 
-li a,
-a.nav-link {
-    font-size: 18px;
+li a {
+    font-size: 14px;
+    color: var(--pink);
 }
 
 li a:hover {
@@ -183,6 +183,16 @@ li a:hover {
 }
 
 /* ------------------------------- Navbar */
+
+a.nav-link {
+    font-size: 18px;
+    color: var(--green) !important;
+}
+
+a.nav-link:hover {
+    color: var(--white) !important;
+}
+
 #carouselContent {
     background-color: var(--lightgrey)
 }

@@ -6,10 +6,10 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <ul class="navbar-nav">
                 <li {% if '/' == request.path %} class="nav-item active mr-3" {% else %} class="nav-item mr-3" {% endif %}>
-                    <a class="nav-link text-white" href=" {% url 'home' %}">Home</a>
+                    <a class="nav-link" href=" {% url 'home' %}">Home</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="logo-font nav-link text-white mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="logo-font nav-link mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         All Products
                     </a>
                     <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
@@ -20,7 +20,7 @@
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="logo-font nav-link text-white mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="logo-font nav-link mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Women
                     </a>
                     <div class="dropdown-menu border-0" aria-labelledby="shop-link">
@@ -32,7 +32,7 @@
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="logo-font nav-link text-white mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="logo-font nav-link mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Men
                     </a>
                     <div class="dropdown-menu border-0" aria-labelledby="shop-link">
@@ -48,27 +48,27 @@
                 {% if request.user.is_authenticated %}
                 {% if request.user.is_superuser%}
                 <li class="nav-item mr-3">
-                    <a class="nav-link text-white" href="{% url 'add_product' %}">Product Management</a>
+                    <a class="nav-link" href="{% url 'add_product' %}">Product Management</a>
                 </li>
                 {% endif %}
                 <li class="nav-item mr-3">
-                    <a class="nav-link text-white" href="{% url 'profile' %}">My Profile</a>
+                    <a class="nav-link" href="{% url 'profile' %}">My Profile</a>
                 </li>
                 <li class="nav-item mr-3">
-                    <a class="nav-link text-white" href="{% url 'account_logout' %}">Logout</a>
+                    <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
                 </li>
                 {% else %}
                 <li class="nav-item mr-3">
-                    <a class="nav-link text-white" href="{% url 'account_signup' %}">Sign up</a>
+                    <a class="nav-link" href="{% url 'account_signup' %}">Sign up</a>
                 </li>
                 <li class="nav-item mr-3">
-                    <a class="nav-link text-white" href="{% url 'account_login' %}">Login</a>
+                    <a class="nav-link" href="{% url 'account_login' %}">Login</a>
                 </li>
                 {% endif %}
                 <li class="list-inline-item">
                     <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
                         <div class="text-center">
-                            <div><i class="fas fa-shopping-bag fa-lg text-white"></i></div>
+                            <div><i class="fas fa-shopping-bag fa-lg"></i></div>
                             <p class="my-0">
                                 {% if grand_total %}
                                 £{{ grand_total|floatformat:2 }}

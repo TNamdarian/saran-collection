@@ -30,42 +30,14 @@
     /* color: var(--bggreen); */
     --lightgrey: #E8EFEB;
     /* color: var(--lightgrey); */
+    --white: #ffffff;
+    /* color: var(--white); */
     --error: #f44336;
     /* color: var(--error); */
-}
 }
 
 html {
     height: 100%;
-}
-
-.btn-black {
-    background: black;
-    color: white;
-}
-
-.btn-outline-black {
-    background: white;
-    color: black !important;
-    /* use important to override link colors for <a> elements */
-    border: 1px solid black;
-}
-
-.btn-outline-black:hover,
-.btn-outline-black:active,
-.btn-outline-black:focus {
-    background: black;
-    color: white !important;
-}
-
-.shop-now-button:hover,
-.shop-now-button:active,
-.shop-now-button:focus,
-.btn-black:hover,
-.btn-black:active,
-.btn-black:focus {
-    background: #222;
-    color: white;
 }
 
 .text-black {
@@ -90,20 +62,6 @@ html {
     z-index: -1;
 }
 
-a.category-badge>span.badge:hover {
-    background: #212529 !important;
-    color: #fff !important;
-}
-
-.btt-button {
-    height: 42px;
-    width: 42px;
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-}
-
-.btt-link,
 .update-link,
 .remove-item {
     cursor: pointer;
@@ -162,6 +120,12 @@ a.category-badge>span.badge:hover {
     height: 100px;
     overflow-x: hidden;
     overflow-y: auto;
+}
+
+/* Showcase  */
+
+h3.showcase {
+    color: var(--green);
 }
 
 /* ------------------------------- Footer */
@@ -240,6 +204,73 @@ h2.logo:hover {
     color: var(--lightgrey);
     text-decoration: none;
     cursor: pointer;
+}
+
+.nav-link:hover {
+    color: var(--green);
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: var(--green);
+}
+
+.nav-link:focus,
+.nav-link:hover,
+.nav-link:active,
+.nav-link:visited,
+.nav-link:focus-visible {
+    color: var(--pick);
+    background-color: var(--lightgreen);
+}
+
+a.dropdown-item {
+    color: var(--green);
+}
+
+a.dropdown-item:hover {
+    color: var(--pink);
+    background-color: var(--green);
+}
+
+.dropdown-menu {
+    color: var(--lightgrey);
+}
+
+.dropdown-item:focus,
+.dropdown-item:hover {
+    color: var(--lightgreen);
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+    color: var(--green);
+    text-decoration: none;
+    background-color: var(--pink);
+}
+
+/* Search  */
+.form-control:focus {
+    color: var(--lightgreen);
+    background-color: var(--white);
+    border-color: var(--lightgreen);
+    outline: 0;
+    border: 0;
+    box-shadow: 0 0 0 0.25rem rgba(152, 223, 136, 0.5);
+}
+
+.form-check-input:focus {
+    border-color: var(--lightgreen);
+    outline: 0;
+    border: 0;
+    box-shadow: 0 0 0 0.25rem rgba(152, 223, 136, 0.5);
+}
+
+i.fas.fa-search {
+    color: var(--green);
+}
+
+.form-control {
+    border-radius: 8px;
 }
 
 /* --- PROGRESS BAR --- */
@@ -379,7 +410,6 @@ h2.logo:hover {
 }
 
 /* Product Form */
-
 .btn-file {
     position: relative;
     overflow: hidden;
@@ -407,7 +437,6 @@ h2.logo:hover {
 }
 
 /* --- LANDING SECTION --- */
-
 /* Smaller Screens */
 .landing1,
 .landing2 {
@@ -430,7 +459,6 @@ h2.logo:hover {
 .landing2 {
     background: url('/static/images/home/pexels-cottonbro.jpg') no-repeat center center;
 }
-
 
 /* For Tablets */
 @media only screen and (min-width: 768px) {
@@ -469,4 +497,38 @@ h2.logo:hover {
 /* --- LANDING PAGE ROW--- */
 .landing-row {
     padding-top: 100px;
+}
+
+/* --- BUTTONS --- */
+.shop-now-button {
+    background: var(--green);
+    color: var(--white);
+    min-width: 260px;
+    border-radius: 8px;
+}
+
+.shop-now-button:hover,
+.shop-now-button:active,
+.shop-now-button:focus {
+    background: var(--pink);
+    color: var(--white);
+}
+
+.btn-black {
+    background: black;
+    color: white;
+}
+
+.btn-outline-black {
+    background: white;
+    color: black !important;
+    /* use important to override link colors for <a> elements */
+    border: 1px solid black;
+}
+
+.btn-outline-black:hover,
+.btn-outline-black:active,
+.btn-outline-black:focus {
+    background: black;
+    color: white !important;
 }

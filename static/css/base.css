@@ -208,9 +208,9 @@ footer #main-footer {
     list-style: none;
 }
 
-li a {
-    color: var(--pink);
-    font-size: 14px;
+li a,
+a.nav-link {
+    font-size: 18px;
 }
 
 li a:hover {

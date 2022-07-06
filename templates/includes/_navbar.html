@@ -48,37 +48,30 @@
                 {% if request.user.is_authenticated %}
                 {% if request.user.is_superuser%}
                 <li class="nav-item mr-3">
-                    <a class="nav-link" href="{% url 'add_product' %}">
-                        <i class="fas fa-user-plus"></i>Product Management</a>
+                    <a class="nav-link text-white" href="{% url 'add_product' %}">Product Management</a>
                 </li>
                 {% endif %}
                 <li class="nav-item mr-3">
-                    <a class="nav-link" href="{% url 'profile' %}">
-                        <i class="fas fa-user-plus"></i>My Profile</a>
+                    <a class="nav-link text-white" href="{% url 'profile' %}">My Profile</a>
                 </li>
                 <li class="nav-item mr-3">
-                    <a class="nav-link" href="{% url 'account_logout' %}">
-                        <i class="fas fa-user-plus"></i>Logout</a>
+                    <a class="nav-link text-white" href="{% url 'account_logout' %}">Logout</a>
                 </li>
                 {% else %}
                 <li class="nav-item mr-3">
-                    <a class="nav-link" href="{% url 'account_signup' %}">
-                        <i class="fas fa-user-plus"></i>Sign up</a>
+                    <a class="nav-link text-white" href="{% url 'account_signup' %}">Sign up</a>
                 </li>
                 <li class="nav-item mr-3">
-                    <a class="nav-link" href="{% url 'account_login' %}">
-                        <i class="fas fa-sign-in-alt"></i>Login</a>
+                    <a class="nav-link text-white" href="{% url 'account_login' %}">Login</a>
                 </li>
                 {% endif %}
                 <li class="list-inline-item">
                     <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
                         <div class="text-center">
-                            <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+                            <div><i class="fas fa-shopping-bag fa-lg text-white"></i></div>
                             <p class="my-0">
                                 {% if grand_total %}
                                 £{{ grand_total|floatformat:2 }}
-                                {% else %}
-                                £0.00
                                 {% endif %}
                             </p>
                         </div>

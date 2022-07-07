@@ -303,7 +303,7 @@ i.fas.fa-search {
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background-color: var(--Light);
+    background-color: var(--lightgrey);
     z-index: 200;
     position: relative
 }
@@ -326,11 +326,13 @@ i.fas.fa-search {
     font-size: 18px;
     font-weight: 700;
     padding-left: 15px;
+    color: var(--green);
 }
 
 #step-2-bag::after {
     content: "Checkout";
     font-size: 15px;
+
 }
 
 #step-3-bag::after {
@@ -371,7 +373,6 @@ i.fas.fa-search {
     content: "Checkout";
     font-size: 17px;
     font-weight: 700;
-    color: var(--lightgrey);
 }
 
 #step-3-checkout::after {
@@ -380,7 +381,7 @@ i.fas.fa-search {
 }
 
 .checkout-progressbar {
-    background-color: var(--lightgreen);
+    background-color: var(--orange);
 }
 
 /* Confirmation Steps */
@@ -420,11 +421,11 @@ i.fas.fa-search {
 }
 
 .success-progressbar {
-    background-color: var(--lightgreen);
+    background-color: var(--orange);
 }
 
 #success-progresses #success-progess {
-    background-color: var(--lightgreen);
+    background-color: var(--orange);
 }
 
 /* Product Management Form */

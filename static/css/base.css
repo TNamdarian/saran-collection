@@ -513,6 +513,9 @@ a.size-guide:hover {
     color: var(--white);
 }
 
+p.info {
+    color: var(--green);
+}
 
 /* --- LANDING SECTION --- */
 /* Smaller Screens */
@@ -629,4 +632,31 @@ a.size-guide:hover {
 .btn-link:hover {
     color: var(--pink);
     text-decoration: none;
+}
+
+.action-btn {
+    background: var(--green);
+    color: var(--pink);
+    min-width: fit-content;
+    border-radius: 8px;
+}
+
+.action-btn:hover {
+    background: var(--green);
+    color: var(--white);
+}
+
+.alt-action-btn {
+    background: var(--pink);
+    color: var(--green);
+    min-width: fit-content;
+    border-color: var(--pink);
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+.alt-action-btn:hover {
+    background: var(--green);
+    border-color: var(--green);
+    color: var(--white);
 }

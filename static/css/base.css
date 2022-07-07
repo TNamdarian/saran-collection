@@ -214,17 +214,10 @@ a.nav-link:hover {
 }
 
 .logo {
-    color: var(--pink);
-    background-color: var(--green);
-    font-size: 42px;
-    font-weight: 300;
-    margin-bottom: 0;
-    padding: 40px;
+    width: 50%;
 }
 
-h2.logo:hover {
-    color: var(--orange);
-    text-decoration: none;
+.logo:hover {
     cursor: pointer;
 }
 
@@ -593,7 +586,7 @@ p.info {
 /* --- BUTTONS --- */
 .shop-now-button {
     background: var(--green);
-    color: var(--white);
+    color: var(--orange);
     min-width: 260px;
     border-radius: 8px;
 }
@@ -604,20 +597,6 @@ p.info {
     background: var(--pink);
     color: var(--white);
 }
-
-.btn-outline-black {
-    background: white;
-    color: black !important;
-    /* use important to override link colors for <a> elements */
-    border: 1px solid black;
-}
-
-/* .btn-outline-black:hover,
-.btn-outline-black:active,
-.btn-outline-black:focus {
-    background: orange;
-    color: white !important;
-} */
 
 .view-btn {
     color: var(--white);
@@ -679,6 +658,7 @@ p.info {
     color: var(--green);
 }
 
+/* Login, Logout and sing up pages */
 .section-img {
     max-width: 90%;
 }

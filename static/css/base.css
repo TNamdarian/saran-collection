@@ -666,3 +666,19 @@ p.info {
     border-color: var(--orange);
     color: var(--green);
 }
+
+.subscription-button {
+    background: var(--green);
+    color: var(--white);
+    min-width: 260px;
+    border-radius: 8px;
+}
+
+.subscription-button:hover {
+    background: var(--orange);
+    color: var(--green);
+}
+
+.section-img {
+    max-width: 90%;
+}

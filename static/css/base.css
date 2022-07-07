@@ -182,6 +182,11 @@ li a:hover {
     text-decoration: none;
 }
 
+.sizing {
+    background: url('/static/images/sizing/sizing.png') no-repeat center center;
+
+}
+
 /* ------------------------------- Navbar */
 
 a.nav-link {
@@ -446,6 +451,11 @@ i.fas.fa-search {
     border-radius: 0;
 }
 
+/* Products Page */
+.products-preview {
+    margin-bottom: 40px;
+}
+
 /* --- LANDING SECTION --- */
 /* Smaller Screens */
 .landing1,
@@ -541,4 +551,15 @@ i.fas.fa-search {
 .btn-outline-black:focus {
     background: black;
     color: white !important;
+}
+
+.view-btn {
+    color: var(--white);
+    background-color: var(--green);
+    display: block;
+}
+
+.view-btn:hover {
+    color: var(--pink);
+    background-color: var(--green);
 }

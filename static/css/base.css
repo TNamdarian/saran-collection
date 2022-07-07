@@ -37,6 +37,8 @@
     /* color: var(--white); */
     --black: #030303;
     /* color: var(--black); */
+    --orange: #FF9F29;
+    /* color: var(--orange); */
     --error: #f44336;
     /* color: var(--error); */
 }
@@ -155,7 +157,7 @@ footer #main-footer {
 }
 
 .social i:hover {
-    color: var(--lightgrey);
+    color: var(--orange);
 }
 
 .fas.icon {
@@ -183,7 +185,7 @@ li a {
 }
 
 li a:hover {
-    color: var(--lightgrey);
+    color: var(--orange);
     text-decoration: none;
 }
 
@@ -221,7 +223,7 @@ a.nav-link:hover {
 }
 
 h2.logo:hover {
-    color: var(--lightgrey);
+    color: var(--orange);
     text-decoration: none;
     cursor: pointer;
 }
@@ -261,7 +263,7 @@ a.dropdown-item:hover {
 
 /* Search  */
 .form-control:focus {
-    color: var(--lightgreen);
+    color: var(--black);
     background-color: var(--white);
     border-color: var(--lightgreen);
     outline: 0;
@@ -277,7 +279,7 @@ a.dropdown-item:hover {
 }
 
 i.fas.fa-search {
-    color: var(--green);
+    color: var(--orange);
 }
 
 .form-control {
@@ -425,10 +427,17 @@ i.fas.fa-search {
     background-color: var(--lightgreen);
 }
 
-/* Product Form */
+/* Product Management Form */
 .btn-file {
     position: relative;
     overflow: hidden;
+    color: var(--white);
+    background-color: var(--green);
+}
+
+.btn-file:hover {
+    color: var(--green);
+    background-color: var(--orange);
 }
 
 .btn-file input[type="file"] {
@@ -486,7 +495,7 @@ a.size-guide {
 a.size-guide:hover {
     font-size: 16px;
     font-weight: bold;
-    color: var(--green);
+    color: var(--orange);
 }
 
 .decrement-qty {
@@ -595,11 +604,6 @@ p.info {
     color: var(--white);
 }
 
-.btn-black {
-    background: black;
-    color: white;
-}
-
 .btn-outline-black {
     background: white;
     color: black !important;
@@ -607,21 +611,21 @@ p.info {
     border: 1px solid black;
 }
 
-.btn-outline-black:hover,
+/* .btn-outline-black:hover,
 .btn-outline-black:active,
 .btn-outline-black:focus {
-    background: black;
+    background: orange;
     color: white !important;
-}
+} */
 
 .view-btn {
     color: var(--white);
-    background-color: var(--green);
+    background-color: var(--orange);
     display: block;
 }
 
 .view-btn:hover {
-    color: var(--pink);
+    color: var(--orange);
     background-color: var(--green);
 }
 
@@ -657,7 +661,7 @@ p.info {
 }
 
 .alt-action-btn:hover {
-    background: var(--black);
-    border-color: var(--black);
-    color: var(--white);
+    background: var(--orange);
+    border-color: var(--orange);
+    color: var(--green);
 }

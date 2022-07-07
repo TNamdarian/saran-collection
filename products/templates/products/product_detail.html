@@ -133,13 +133,13 @@
                     </div>
                     <!-- Buttons & Links -->
                     <div class="col{% if s %}-12 mt-2{% endif %}">
-                        <a href="{% url 'products' %}" class="btn alt-action-btn mt-5 ml-0">
+                        <a href="{% url 'products' %}" class="btn action-btn mt-5 ml-0">
                             <span class="icon">
                                 <i class="fas fa-chevron-left"></i>
                             </span>
                             <span class="">Keep Shopping</span>
                         </a>
-                        <input type="submit" class="btn action-btn mt-5" value="Add to bag">
+                        <input type="submit" class="btn alt-action-btn mt-5" value="Add to bag">
                     </div>
                     <input type="hidden" name="redirect_url" value="{{ request.path }}">
                     {% endwith %}

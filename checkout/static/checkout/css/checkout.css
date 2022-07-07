@@ -22,8 +22,7 @@
 /* -------------------------------------------------- Root Variables*/
 :root {
     --green: #295939;
-    color: var(--green);
-    /*previious color #81b214*/
+    /* color: var(--green); */
     --pink: #E9B0DF;
     /* color: var(--bggreen); */
     --lightgrey: #E8EFEB;
@@ -38,7 +37,6 @@
     height: 40px;
     padding: 10px 12px;
     border: 1px solid transparent;
-    border-radius: 0px;
     background-color: var(--lightgrey);
     box-shadow: 0 1px 3px 0 var(--lightgreen);
     -webkit-transition: box-shadow 150ms ease;
@@ -63,7 +61,6 @@
     color: var(--green);
 }
 
-
 .form-group {
     margin-bottom: 1rem;
 }
@@ -75,12 +72,13 @@
 }
 
 .StripeElement--webkit-autofill {
-    background-color: var(--bgWhite) !important;
+    background-color: var(--white) !important;
 }
 
 .stripe-style-input::placeholder {
     color: var(--green);
     color: var(--green);
+
 }
 
 .fieldset-label {
@@ -111,7 +109,7 @@ select option[value=""] {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(52, 62, 71, 0.85);
+    background: rgba(234, 176, 29, 0.85);
     z-index: 9999;
 }
 

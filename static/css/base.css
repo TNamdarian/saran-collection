@@ -24,10 +24,11 @@
     --Antonio: 'Antonio', sans-serif;
     /* font-family: var(--Antonio); */
     --green: #295939;
-    color: var(--green);
-    /*previious color #81b214*/
+    /* color: var(--green); */
     --pink: #E9B0DF;
-    /* color: var(--bggreen); */
+    /* color: var(--pink); */
+    --lightpink: #FAD9E6;
+    /* color: var(--lightpink); */
     --lightgrey: #E8EFEB;
     /* color: var(--lightgrey); */
     --white: #ffffff;
@@ -456,6 +457,63 @@ i.fas.fa-search {
     margin-bottom: 40px;
 }
 
+/* Products Details Page */
+h3.product-details,
+h6.product-details {
+    color: var(--green);
+    margin-bottom: 30px;
+}
+
+#headingOne,
+#headingTwo,
+#headingThree {
+    background-color: var(--green);
+    border-radius: 5px;
+}
+
+.card-body {
+    color: var(--green);
+}
+
+a.link-text,
+a.size-guide {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--green);
+}
+
+.link-text:hover,
+a.size-guide:hover {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--green);
+}
+
+.decrement-qty {
+    border-radius: 8px;
+    background: var(--green);
+    color: var(--white);
+}
+
+.decrement-qty:hover {
+    border-radius: 8px;
+    background: var(--pink);
+    color: var(--white);
+}
+
+.increment-qty {
+    border-radius: 8px;
+    background: var(--green);
+    color: var(--white);
+}
+
+.increment-qty:hover {
+    border-radius: 8px;
+    background: var(--pink);
+    color: var(--white);
+}
+
+
 /* --- LANDING SECTION --- */
 /* Smaller Screens */
 .landing1,
@@ -562,4 +620,13 @@ i.fas.fa-search {
 .view-btn:hover {
     color: var(--pink);
     background-color: var(--green);
+}
+
+.btn-link {
+    color: var(--white);
+}
+
+.btn-link:hover {
+    color: var(--pink);
+    text-decoration: none;
 }

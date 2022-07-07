@@ -6,15 +6,6 @@
 <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
 {% endblock %}
 
-{% block page_header %}
-<div class="container header-container">
-    <div class="row">
-        <div class="col">
-        </div>
-    </div>
-</div>
-{% endblock %}
-
 {% block content %}
 <!-- Checkout Progress bar -->
 <!-- Original code with modifications for progress bar from: https://bbbootstrap.com/snippets/bootstrap-5-ecommerce-checkout-form-progress-bar-44177913 -->
@@ -29,17 +20,16 @@
     </div>
 </div>
 <!-- Heading -->
-<div class="overlay"></div>
 <div class="container">
     <div class="row">
         <div class="col text-center mt-5">
-            <h2 class="logo-font">Checkout</h2>
+            <h3 class="text-center mb-3 showcase">Checkout</h3>
             <hr class="w-100 mb-1">
         </div>
     </div>
 </div>
 <!-- Bag Summary -->
-<main class="container mb-5">
+<main class="container table mb-5">
     <div class="row">
         <div class="col-12 col-lg-6 order-lg-last mb-5">
             <h3 class="smaller-heading pb-3 pt-3 text-center">Order Summary ({{ product_count }})</h3>
@@ -67,7 +57,7 @@
                     <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
                 </div>
                 <div class="col-2 text-right  pe-0">
-                    <p class="my-0 small text-muted">€{{ item.product.price | calc_subtotal:item.quantity }}</p>
+                    <p class="my-0 small text-muted">£{{ item.product.price | calc_subtotal:item.quantity }}</p>
                 </div>
             </div>
             {% endfor %}
@@ -81,7 +71,7 @@
                 <div class="col-3">
                     <p class="my-0">£{{ total | floatformat:2 }}</p>
                     <p class="my-0">£{{ delivery | floatformat:2 }}</p>
-                    <p class="my-0"><strong>€{{ grand_total | floatformat:2 }}</strong></p>
+                    <p class="my-0"><strong>£{{ grand_total | floatformat:2 }}</strong></p>
                 </div>
             </div>
         </div>

@@ -74,6 +74,12 @@
                             </div>
                         </div>
                     </div>
+                    {% if request.user.is_superuser %}
+                    <small class="ml-0">
+                        <a href="{% url 'edit_product' product.id %}" class="btn action-btn btn-sm">Edit</a>
+                        <a href="{% url 'delete_product' product.id %}" class="btn alt-action-btn btn-sm">Delete</a>
+                    </small>
+                    {% endif %}
                     {% if product.category %}
                     <p class="small mt-1 mb-3">
                         <a class="link-text" href="{% url 'products' %}?category={{ product.category.name }}">
@@ -82,12 +88,6 @@
                     </p>
                     {% endif %}
                 </div>
-                {% if request.user.is_superuser %}
-                <small class="ml-3">
-                    <a href="{% url 'edit_product' product.id %}" class="btn action-btn btn-sm">Edit</a>
-                    <a class="btn alt-action-btn btn-sm" href="{% url 'delete_product' product.id %}">Delete</a>
-                </small>
-                {% endif %}
                 <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
                     {% csrf_token %}
                     <div class="form-row">
@@ -133,7 +133,7 @@
                     </div>
                     <!-- Buttons & Links -->
                     <div class="col{% if s %}-12 mt-2{% endif %}">
-                        <a href="{% url 'products' %}" class="btn alt-action-btn mt-5">
+                        <a href="{% url 'products' %}" class="btn alt-action-btn mt-5 ml-0">
                             <span class="icon">
                                 <i class="fas fa-chevron-left"></i>
                             </span>

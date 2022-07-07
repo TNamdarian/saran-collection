@@ -25,6 +25,8 @@
     /* font-family: var(--Antonio); */
     --green: #295939;
     /* color: var(--green); */
+    --lightgreen: #5cf18d;
+    /* color: var(--lightgreen); */
     --pink: #E9B0DF;
     /* color: var(--pink); */
     --lightpink: #FAD9E6;
@@ -33,6 +35,8 @@
     /* color: var(--lightgrey); */
     --white: #ffffff;
     /* color: var(--white); */
+    --black: #030303;
+    /* color: var(--black); */
     --error: #f44336;
     /* color: var(--error); */
 }
@@ -230,15 +234,6 @@ h2.logo:hover {
     color: var(--green);
 }
 
-.nav-link:focus,
-.nav-link:hover,
-.nav-link:active,
-.nav-link:visited,
-.nav-link:focus-visible {
-    color: var(--pick);
-    background-color: var(--lightgreen);
-}
-
 a.dropdown-item {
     color: var(--green);
 }
@@ -348,6 +343,11 @@ i.fas.fa-search {
     position: absolute;
     background-color: var(--lightgrey);
     border-radius: 10px
+}
+
+/* Bag page */
+.table {
+    color: var(--green);
 }
 
 /* Checkout Steps */
@@ -639,6 +639,7 @@ p.info {
     color: var(--pink);
     min-width: fit-content;
     border-radius: 8px;
+    margin: 10px;
 }
 
 .action-btn:hover {
@@ -648,15 +649,15 @@ p.info {
 
 .alt-action-btn {
     background: var(--pink);
-    color: var(--green);
+    color: var(--black);
     min-width: fit-content;
-    border-color: var(--pink);
+    border-color: var(--white);
     border-radius: 8px;
-    margin-right: 10px;
+    margin: 10px;
 }
 
 .alt-action-btn:hover {
-    background: var(--green);
-    border-color: var(--green);
+    background: var(--black);
+    border-color: var(--black);
     color: var(--white);
 }

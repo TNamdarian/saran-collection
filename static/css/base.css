@@ -663,6 +663,11 @@ p.info {
     color: var(--white);
 }
 
+.btn-block:hover {
+    background-color: var(--orange);
+    color: var(--green);
+}
+
 /* Login, Logout and sing up pages */
 .section-img {
     max-width: 90%;

@@ -257,5 +257,41 @@
             "rating": 4.8,
             "image": "shabnam-front.JPG"
         }
+    }, {
+        "pk": 1,
+        "model": "products.product",
+        "fields": {
+            "sku": "hb2021001",
+            "category": 5,
+            "name": "ELLY WIDE LEG JUMPSUIT - SLATE BLUE",
+            "description": "The Elly Jumpsuit in slate blue is our classic silhouette curated to make an elegant statement. A one - shoulder jumpsuit with an asymmetric neckline and simple square cut out to elevate and highlight your form.A fitted bodice flows seamlessly into high - waisted flattering wide leg palazzo trousers to balance the whole look. Completed with a concealed side zip for seamless perfect fit.",
+            "price": 140.00,
+            "rating": 4.9,
+            "image": "elly-blue-front.png"
+        }
+    }, {
+        "pk": 20,
+        "model": "products.product",
+        "fields": {
+            "sku": "sc2021020",
+            "category": 5,
+            "name": "SHABNAM",
+            "description": "These heels combine structured faux leather with a tapered toe to bring you a shoe designed for the office. Finished with a chic gold metal bar",
+            "price": 12.00,
+            "rating": 4.8,
+            "image": "shabnam-front.JPG"
+        }
+    }, {
+        "pk": 8,
+        "model": "products.product",
+        "fields": {
+            "sku": "sc2021008",
+            "category": 5,
+            "name": "CANDICE ONE SHOULDER MINI DRESS",
+            "description": "The Candice mini dress in red features a double shoulder strap and cut-out back detail. One-shoulder style dress with asymmetric hemline and side split. Fitted mini dress fully lined in a soft-touch lining. Concealed zip fastening to the side.",
+            "price": 110.00,
+            "rating": 4.8,
+            "image": "candice-front.png"
+        }
     }
 ]

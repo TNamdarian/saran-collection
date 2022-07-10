@@ -3,7 +3,7 @@
         "model": "products.category",
         "fields": {
             "name": "jumpsuits",
-            "friendly_name": "Suits"
+            "friendly_name": "Jumpsuits"
         }
     },
     {
@@ -36,6 +36,13 @@
         "fields": {
             "name": "bestsellers",
             "friendly_name": "Bestsellers"
+        }
+    }, {
+        "pk": 6,
+        "model": "products.category",
+        "fields": {
+            "name": "suits",
+            "friendly_name": "Suits"
         }
     }
 ]

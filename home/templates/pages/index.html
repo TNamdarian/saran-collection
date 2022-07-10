@@ -29,7 +29,7 @@
             <div class="my-5">
                 <h1>
                     <a href="{% url 'products' %}" class="shop-now-button btn btn-lg text-uppercase py-3 ">
-                        Shop Woemn
+                        Shop
                     </a>
                 </h1>
             </div>
@@ -42,7 +42,7 @@
             <div class="my-5">
                 <h1>
                     <a href="{% url 'products' %}" class="shop-now-button btn btn-lg text-uppercase py-3 ">
-                        Shop Men
+                        Shop
                     </a>
                 </h1>
             </div>
@@ -85,12 +85,11 @@
                         </div>
                     </div>
                     <!-- product details -->
-                    <a href="" class="btn btn-primary btn-block">More Info</a>
+                    <a href="{% url 'product_detail' product.id %} " class="btn btn-small view-btn">View Details</a>
                 </div>
             </div>
         </div>
         {% endfor %}
     </div>
 </div>
-
 {% endblock %}

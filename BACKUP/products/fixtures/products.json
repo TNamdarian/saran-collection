@@ -250,7 +250,7 @@
         "model": "products.product",
         "fields": {
             "sku": "sc2021009",
-            "category": 5,
+            "category": 6,
             "name": "SLIM FIT PALE PINK TWEED SUIT",
             "description": "A masterclass in bringing tweed firmly up to date, Saran London's three-piece suit combines the dense herringbone weave with an unexpected pink colour and a defined fit – perfect for hitting the right notes at a special occasion. Keep the finishing touches simple.A white shirt, printed pocket square and sockless loafers will balance well for a wedding or warm - weather work commitment.",
             "price": 149.00,
@@ -263,7 +263,7 @@
         "model": "products.product",
         "fields": {
             "sku": "sc2021010",
-            "category": 5,
+            "category": 6,
             "name": "TAILORED FIT DUSTY PINK HERRINGBONE SUIT",
             "description": "We love tweed, especially for weddings, but choosing the right colours and weaves is essential if you want cutting-edge rather than traditional. Arriving in a dusty pink with a herringbone structure, Saran 1851 's tailored-fit suit does a fine job of updating a classic, with the wool-blend cloth lending a level of richness to your formal look.",
             "price": 149.00,
@@ -276,7 +276,7 @@
         "model": "products.product",
         "fields": {
             "sku": "sc2021011",
-            "category": 5,
+            "category": 6,
             "name": "SLIM FIT NAVY BLACK CHECK SUIT",
             "description": "Switch out those safer plain weaves and add some checks into the mix. Saran London's slim-fitting jacket combines navy and black for a versatile palette that'll work from office formality to pared-back weekend looks. Complete with patterned buttons and bronze lining, it's a natural partner to lighter tones for a balanced look. Due to individual browser/monitor settings, actual colours may differ slightly.",
             "price": 149.00,
@@ -289,7 +289,7 @@
         "model": "products.product",
         "fields": {
             "sku": "sc2021012",
-            "category": 5,
+            "category": 6,
             "name": "TAILORED FIT NOTCH LAPEL TUXEDO",
             "description": "Switch out those safer plain weaves and add some checks into the mix. Saran London's slim-fitting jacket combines navy and black for a versatile palette that'll work from office formality to pared-back weekend looks. Complete with patterned buttons and bronze lining, it's a natural partner to lighter tones for a balanced look. Due to individual browser/monitor settings, actual colours may differ slightly.",
             "price": 149.00,
@@ -302,7 +302,7 @@
         "model": "products.product",
         "fields": {
             "sku": "sc2021013",
-            "category": 6,
+            "category": 7,
             "name": "TAILORED FIT BLUE FLORAL SHIRT",
             "description": "Designed in pure cotton with a sharp tailored fit, Saran 1851's shirt will liven up plain tailoring nicely. The micro - floral print mixes lighter blue and navy tones for adaptable styling.",
             "price": 35.00,
@@ -315,7 +315,7 @@
         "model": "products.product",
         "fields": {
             "sku": "sc2021014",
-            "category": 6,
+            "category": 7,
             "name": "SLIM FIT SKY DOBBY STRETCH SHIRT",
             "description": "Woven with a dobby structure in stretch yarns that are rich in cotton, Saran London's slim-fitting shirt will have you looking and feeling on form on even the busiest days.The sky - blue tone is great with tonal or black tailoring and it 'll run quite happily through your wash to be fresh for next time.",
             "price": 54.00,
@@ -328,7 +328,7 @@
         "model": "products.product",
         "fields": {
             "sku": "sc2021015",
-            "category": 6,
+            "category": 7,
             "name": "TAILORED FIT SAGE FLORAL SHIRT",
             "description": "Woven with a dobby structure in stretch yarns that are rich in cotton, Saran London's slim-fitting shirt will have you looking and feeling on form on even the busiest days.The sky - blue tone is great with tonal or black tailoring and it 'll run quite happily through your wash to be fresh for next time.",
             "price": 55.00,
@@ -341,38 +341,12 @@
         "model": "products.product",
         "fields": {
             "sku": "sc2021016",
-            "category": 6,
+            "category": 7,
             "name": "SLIM FIT NAVY ROYAL OXFORD NON - IRON SHIRT",
             "description": "Woven with a dobby structure in stretch yarns that are rich in cotton, Saran London's slim-fitting shirt will have you looking and feeling on form on even the busiest days.The sky - blue tone is great with tonal or black tailoring and it 'll run quite happily through your wash to be fresh for next time.",
             "price": 55.00,
             "rating": 4.0,
             "image": "slim_fit_navy_royal_oxford_non_iron_shirt.png"
-        }
-    },
-    {
-        "pk": 28,
-        "model": "products.product",
-        "fields": {
-            "sku": "sc2021017",
-            "category": 7,
-            "name": "TAN LEATHER BELT",
-            "description": "A great choice for chinos and blue denim, MB's belt is crafted in rich leather with a tan tone. The buckle is designed in polished silver-effect hardware and supplemented by a leather keeper to guarantee a pulled-together look.",
-            "price": 24.99,
-            "rating": 4.0,
-            "image": "tan_leather_belt.png"
-        }
-    },
-    {
-        "pk": 29,
-        "model": "products.product",
-        "fields": {
-            "sku": "sc2021018",
-            "category": 7,
-            "name": "BLACK LEATHER BELT",
-            "description": "Seal off everything from jeans to formal trousers with MB's adaptable black belt. Crafted in smooth leather, it secures with a pin buckle in a silver effect and features a leather keeper to hold the tip neatly in place.",
-            "price": 24.99,
-            "rating": 4.0,
-            "image": "black_leather_belt.png"
         }
     }
 ]

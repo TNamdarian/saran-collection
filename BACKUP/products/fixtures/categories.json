@@ -43,13 +43,5 @@
             "name": "shirts",
             "friendly_name": "Shirts"
         }
-    },
-    {
-        "pk": 7,
-        "model": "products.category",
-        "fields": {
-            "name": "belts",
-            "friendly_name": "Belts"
-        }
     }
 ]

@@ -45,39 +45,37 @@
                 </li>
             </ul>
             <ul class="navbar-nav ml-auto">
-                {% if request.user.is_authenticated %}
-                {% if request.user.is_superuser%}
-                <li class="nav-item mr-3">
-                    <a class="nav-link" href="{% url 'add_product' %}">Product Management</a>
-                </li>
-                {% endif %}
-                <li class="nav-item mr-3">
-                    <a class="nav-link" href="{% url 'profile' %}">My Profile</a>
-                </li>
-                <li class="nav-item mr-3">
-                    <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
-                </li>
-                {% else %}
-                <li class="nav-item mr-3">
-                    <a class="nav-link" href="{% url 'account_signup' %}">Sign up</a>
-                </li>
-                <li class="nav-item mr-3">
-                    <a class="nav-link" href="{% url 'account_login' %}">Login</a>
-                </li>
-                {% endif %}
-                <li class="list-inline-item">
-                    <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
-                        <div class="text-center">
-                            <div><i class="fas fa-shopping-bag fa-lg"></i></div>
-                            <p class="my-0">
-                                {% if grand_total %}
-                                £{{ grand_total|floatformat:2 }}
-                                {% endif %}
-                            </p>
+                <li>
+                    <div class="dropdown">
+                        <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-user fa-lg" aria-hidden="true"></i>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            {% if request.user.is_authenticated %}
+                            {% if request.user.is_superuser%}
+                            <a class="dropdown-item" href="{% url 'add_product' %}">Product Management</a>
+                            {% endif %}
+                            <a class="dropdown-item" href="{% url 'profile' %}">My Profile</a>
+                            <a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a>
+                            {% else %}
+                            <a class="dropdown-item" href="{% url 'account_signup' %}">Sign up</a>
+                            <a class="dropdown-item" href="{% url 'account_login' %}">Login</a>
+                            {% endif %}
                         </div>
-                    </a>
+                    </div>
                 </li>
-            </ul>
+        </div>
+        <div class="list-inline-item">
+            <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
+                <div class="text-center">
+                    <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+                    <p class="my-0">
+                        {% if grand_total %}
+                        £{{ grand_total|floatformat:2 }}
+                        {% endif %}
+                    </p>
+                </div>
+            </a>
         </div>
     </div>
 </nav>

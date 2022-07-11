@@ -189,7 +189,7 @@ li a:hover {
     text-decoration: none;
 }
 
-/* Sizing page */
+/* Size charts page */
 
 .sizing {
     margin-bottom: 30px;
@@ -545,10 +545,11 @@ p.info {
     padding-right: 8rem;
     padding-top: 5rem;
     padding-bottom: 8px;
-    min-height: 90vh;
+    min-height: 50vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50%;
+    min-width: 50px;
 }
 
 .landing1 {
@@ -687,4 +688,9 @@ p.info {
 /* Login, Logout and sing up pages */
 .section-img {
     max-width: 90%;
+}
+
+
+.card-img-top .img-fluid img {
+    height: 300px;
 }

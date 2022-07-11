@@ -5,6 +5,12 @@ from django.db.models import Q
 from .forms import ProductForm
 from django.contrib.auth.decorators import login_required
 from django.db.models.functions import Lower
+from django.urls import reverse_lazy
+from django.contrib.messages.views import SuccessMessageMixin
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from django.views.generic import (
+    DeleteView,
+)
 
 
 def all_products(request):
@@ -136,17 +142,38 @@ def edit_product(request, product_id):
     return render(request, template, context)
 
 
-@login_required
-def delete_product(request, product_id):
+class DeleteProductView(LoginRequiredMixin, DeleteView, UserPassesTestMixin,
+                        SuccessMessageMixin):
     """
-    Delete a product from the store
+    This renders the page to delete a product. This is to bring in defensive
+    coding to make sure user wants to delete a product. On deletion there
+    is feedback with a success message with SuccessMessageMixin. Use of
+    LoginRequiredMixin to access this page, a user needs to be logged in. Use
+    of UserPassesTestMixin to limit access to logged-in users that pass a test
+    namely, they should have created the product or they are an admin user. Use
+    of DeleteView which is built-in Django to assist with deleting.
     """
-    if not request.user.is_superuser:
-        messages.error(request, 'You need to have the correct '
-                       'permissions to manage product details')
-        return redirect(reverse('home'))
+    model = Product
+    template_name = "products/delete_product.html"
+    success_message = "The Product was successfully deleted."
+    success_url = reverse_lazy('products')
 
-    product = get_object_or_404(Product, pk=product_id)
-    product.delete()
-    messages.success(request, 'Product deleted!')
-    return redirect(reverse('products'))
+    # User permissions: https://bit.ly/3mSsegO
+    def test_func(self):
+        """
+        This is to set the paramaters for UserPassesTestMixin so that only
+        users who created the product or if they are an admin user can delete
+        a product.
+        """
+        if self.request.user.is_superuser:
+            return True
+        return False
+
+    # Success message in DeleteView: https://bit.ly/3oRYlzG
+    def delete(self, request, *args, **kwargs):
+        """
+        This renders a feedback success message related to SuccessMessageMixin
+        once the product is successfully deleted.
+        """
+        messages.success(self.request, self.success_message)
+        return super(DeleteProductView, self).delete(request, *args, **kwargs)

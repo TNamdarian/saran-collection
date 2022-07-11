@@ -98,14 +98,15 @@
                             <p class="small mt-1 mb-3">
                                 <a class="link-text" href="{% url 'sizing' %}">Size Guide</a>
                             </p>
-                            {% if product.category.name == 'shoes' %}
+                            {% if product.category.name == 'womenshoes' or product.category.name == 'menshoes' %}
                             <select class="form-control mt-1 mb-3 size w-50" name="product_size" id='id_product_size'>
-                                <option value="32">32</option>
-                                <option value="33">33</option>
-                                <option value="32">34</option>
-                                <option value="33">35</option>
-                                <option value="32">36</option>
-                                <option value="33">37</option>
+                                <option value="34">34</option>
+                                <option value="35">35</option>
+                                <option value="36">36</option>
+                                <option value="37">37</option>
+                                <option value="38">38</option>
+                                <option value="39">39</option>
+                                <option value="40">40</option>
                             </select>
                             {% else %}
                             <select class="form-control mt-1 mb-3 size w-50" name="product_size" id='id_product_size'>

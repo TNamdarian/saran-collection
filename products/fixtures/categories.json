@@ -26,7 +26,7 @@
         "pk": 4,
         "model": "products.category",
         "fields": {
-            "name": "shoes",
+            "name": "womenshoes",
             "friendly_name": "Shoes"
         }
     }, {
@@ -50,6 +50,14 @@
         "fields": {
             "name": "belts",
             "friendly_name": "Belts"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "products.category",
+        "fields": {
+            "name": "menshoes",
+            "friendly_name": "Shoes"
         }
     }
 ]

@@ -374,5 +374,70 @@
             "rating": 4.0,
             "image": "black_leather_belt.png"
         }
+    },
+    {
+        "pk": 30,
+        "model": "products.product",
+        "fields": {
+            "sku": "sc2021019",
+            "category": 8,
+            "name": "CARTER ROGUE BLACK PLAIN DERBY",
+            "description": "Designed with smooth uppers in black leather, John White's Carter Rogue shoes are a masterclass in clean Derby styling. Featuring contrast stitching at the welt and a simple three-eye lacing system, they'll deliver a shot of refinement to workwear and special-occasion looks.",
+            "price": 99.99,
+            "rating": 4.0,
+            "image": "carter_rogue_black_plain_derby.png"
+        }
+    },
+    {
+        "pk": 31,
+        "model": "products.product",
+        "fields": {
+            "sku": "sc2021020",
+            "category": 8,
+            "name": "DEAKIN BROWN BROGUE SHOE",
+            "description": "A little more casual than smoothly polished laceups, brogues are a great way to add a shot of personality to workwear or occasion looks. Or you might try them with rolled-cuff denim. Or chinos. It's this versatility and more that makes the brogue such a modern essential. Moss London's Deakin shoe is crafted in rich brown leather punctuated with the traditionally inspired wingtip perforations that set the style apart.",
+            "price": 24.99,
+            "rating": 4.0,
+            "image": "deaken_brown_brogue_shoe.png"
+        }
+    },
+    {
+        "pk": 32,
+        "model": "products.product",
+        "fields": {
+            "sku": "sc2021021",
+            "category": 8,
+            "name": "FARRINGDON BLACK HIKING BOOT",
+            "description": "No need to head for the hills – MB’s Farringdon hiking boot is just at home on city pavements. Crafted in black leather and topped with a padded collar that you can cinch tight or leave loose, they're detailed with a hardware lacing system and set on a rubber lug outsole.Opt for the tonal laces or stir things up by threading in the monochrome pattern of the extra pair supplied.",
+            "price": 74.99,
+            "rating": 4.0,
+            "image": "farringdon_black_hiking_boot.png"
+        }
+    },
+    {
+        "pk": 33,
+        "model": "products.product",
+        "fields": {
+            "sku": "sc2021022",
+            "category": 8,
+            "name": "DUCHY BROWN WOVEN LEATHER LOAFER",
+            "description": "Inspired by easygoing Italian style, John White's Duchy loafers are a savvy addition to your wardrobe. Dress them up for work; dial them back for weekend. Either way, the brown woven-leather uppers and tasseled trim will add more than just a little refinement to your look.",
+            "price": 129.99,
+            "rating": 4.0,
+            "image": "duchy_brown_woven_leather_loafer.png"
+        }
+    },
+    {
+        "pk": 34,
+        "model": "products.product",
+        "fields": {
+            "sku": "sc2021023",
+            "category": 8,
+            "name": "BIELLA GUABELLO NAVY TEXTURE TRAINER",
+            "description": "Delivered in tone-on-tone blues, MB's low-profile Biella trainers bring together navy suede with textured wool fabric sourced from the Guabello mill in Italy. It's Italian refinement meets sports styling, and we're here for it.",
+            "price": 24.99,
+            "rating": 4.0,
+            "image": "biella_guabello_navy_texture_trainer.png"
+        }
     }
 ]

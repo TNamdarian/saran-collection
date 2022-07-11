@@ -189,9 +189,17 @@ li a:hover {
     text-decoration: none;
 }
 
-.sizing {
-    background: url('/static/images/sizing/sizing.png') no-repeat center center;
+/* Sizing page */
 
+.sizing {
+    margin-bottom: 30px;
+}
+
+/* Returns Page */
+.returns h4,
+.returns li {
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 /* ------------------------------- Navbar */

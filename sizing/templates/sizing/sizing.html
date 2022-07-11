@@ -2,31 +2,60 @@
 {% load static %}
 
 {% block content %}
-<div class="container-fluid page-wrapper bg-leaves lightgrey-section">
+<div class="container-fluid lightgrey-section">
     <div class="row justify-content-center">
         <div class="col">
-            <h3 class="text-center mb-3 mt-5 showcase">Sizing</h3>
+            <h3 class="text-center mb-3 mt-5 showcase">Women's Size Guide</h3>
             <hr class="w-50 mb-5 mt-5">
         </div>
     </div>
-    <div class="container sizing">
-        <div class="row">
+    <div class="container-fluid sizing">
+        <div class="row justify-content-center">
             <div class="col s12 m12 l12">
-                <img src="{{ MEDIA_URL }}sizing.png" alt="sizing chart" class="sizing">
+                <img src="{{ MEDIA_URL }}women_clothing.png" alt="women clothing size guide" class="sizing">
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col s12 m12 l12">
+                <img src="{{ MEDIA_URL }}women_footwear.png" alt="women footwear size guide" class="sizing">
             </div>
         </div>
     </div>
-    <hr class="w-50 mb-1">
-    <!-- Call to Action -->
-    <div class="row">
-        <div class="col py-5">
-            <a href="{% url 'products' %}" class="btn action-btn btn-lg">
-                <span class="icon">
-                    <i class="fas fa-chevron-left"></i>
-                </span>
-                <span class="text-uppercase">Keep Shopping</span>
-            </a>
+    <div class="container-fluid lightgrey-section">
+        <div class="row justify-content-center">
+            <div class="col">
+                <h3 class="text-center mb-3 mt-5 showcase">Men's Size Guide</h3>
+                <hr class="w-50 mb-5 mt-5">
+            </div>
+        </div>
+        <div class="container-fluid sizing">
+            <div class="row justify-content-center">
+                <div class="col s12 m12 l12">
+                    <img src="{{ MEDIA_URL }}men_shirt.png" alt="men clothing size guide" class="sizing">
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col s12 m12 l12">
+                    <img src="{{ MEDIA_URL }}men_footwear.png" alt="men footwear size guide" class="sizing">
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col s12 m12 l12">
+                    <img src="{{ MEDIA_URL }}men_belt.png" alt="men belt size guide" class="sizing">
+                </div>
+            </div>
+            <hr class="w-50 mb-5 mt-5">
+        </div>
+        <!-- Call to Action -->
+        <div class="row">
+            <div class="col py-5">
+                <a href="{% url 'products' %}" class="btn action-btn btn-lg">
+                    <span class="icon">
+                        <i class="fas fa-chevron-left"></i>
+                    </span>
+                    <span class="text-uppercase">Keep Shopping</span>
+                </a>
+            </div>
         </div>
     </div>
-</div>
-{% endblock %}
+    {% endblock %}

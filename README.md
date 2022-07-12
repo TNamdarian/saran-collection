@@ -178,6 +178,12 @@ The overall structure that was used is the [Bootstrap4](https://getbootstrap.com
 <details>
 <summary>Shopping Bag (bag.html)</summary>
 
+![Wireframe: Shopping Bag](/documentation/wireframes/wireframe_full_shopping_bag.png)
+</details>
+
+<details>
+<summary>Full Shopping Bag (bag.html)</summary>
+
 ![Wireframe: Shopping Bag](/documentation/wireframes/wireframe_bag.png)
 </details>
 

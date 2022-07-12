@@ -47,6 +47,10 @@ html {
     height: 100%;
 }
 
+body {
+    background-color: var(--lightgrey);
+}
+
 .text-black {
     color: #000 !important;
 }
@@ -549,7 +553,6 @@ p.info {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50%;
-    min-width: 50px;
 }
 
 .landing1 {
@@ -561,39 +564,16 @@ p.info {
     background: url('/static/images/home/pexels-cottonbro.jpg') no-repeat center center;
 }
 
-/* For Tablets */
-@media only screen and (min-width: 768px) {
-
-    .landing1,
-    .landing2 {
-        padding-top: 12.5rem;
-        padding-left: 10rem;
-        min-height: 90vh;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: 80%;
-    }
+.landing1,
+.landing2 {
+    padding-top: 12.5rem;
+    padding-left: 10rem;
+    min-height: 90vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 80%;
 }
 
-/* For Desktops */
-@media only screen and (min-width: 1000px) {
-
-    .landing1,
-    .landing2 {
-        padding-top: 12.5rem;
-        padding-left: 10rem;
-    }
-}
-
-/* For Large 4K Screens */
-@media only screen and (min-width: 2560px) {
-
-    .landing1,
-    .landing2 {
-        padding-top: 12.5rem;
-        padding-left: 10rem;
-    }
-}
 
 /* --- LANDING PAGE ROW--- */
 .landing-row {

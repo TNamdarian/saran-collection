@@ -89,10 +89,34 @@
         {% endfor %}
     </div>
 </div>
+<!-- Scroll up button -->
+<button id="scrollButton" title="Go to top">
+    <i class="fas fa-angle-double-up scrollup-arrow"></i>
+</button>
 {% endblock %}
 
 {% block postloadjs %}
 {{ block.super }}
+<script>
+    // Page scroll up feature
+    /* Orginal code from with modifications for project:
+     https://stackoverflow.com/questions/14249998/jquery-back-to-top and https://www.tutorialrepublic.com/faq/how-to-scroll-to-the-top-of-the-page-using-jquery.php */
+    $(window).scroll(function() {
+        if ($(this).scrollTop()) {
+            $('#scrollButton').fadeIn();
+        } else {
+            $('#scrollButton').fadeOut();
+        }
+    });
+
+    $("#scrollButton").click(function() {
+        $("html, body").animate({
+            scrollTop: 0
+        }, "fast");
+    });
+</script>
+
+
 <script type="text/javascript">
     $('.btt-link').click(function(e) {
         window.scrollTo(0, 0)

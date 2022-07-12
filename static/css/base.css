@@ -480,6 +480,37 @@ i.fas.fa-search {
     margin-bottom: 40px;
 }
 
+/* --- SCROLL UP BUTTON --- */
+/* Scroll up button and icon */
+/** Orginal code from https://www.w3schools.com/howto/howto_js_scroll_to_top.asp with modifications for project*/
+#scrollButton {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    color: var(--orange);
+    background-color: var(--bgWhite);
+    cursor: pointer;
+    padding: 10px 17px;
+    border-radius: 50%;
+    margin: 4px 10px;
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#scrollButton:hover {
+    background: var(--green);
+    color: var(--orange);
+}
+
+/* Scroll up button icon */
+.scrollup-arrow {
+    font-size: 20px;
+}
+
 /* Products Details Page */
 h3.product-details,
 h6.product-details {

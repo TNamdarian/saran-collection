@@ -703,7 +703,7 @@ ___
 - The copy and text for this website was created by Teema Namdarian 
 - Product descriptions from the following sources:
   - https://www.moss.co.uk/
-- https://www.aqaq.com/
+  - https://www.aqaq.com/
 
 ### **Media**
 - Logo Illustration is commissioned. 

@@ -133,7 +133,7 @@ ColorHunt was used to map out my colour scheme.
 <details>
 <summary>Colour Palette Detail</summary>
 
-![Colour Palette](/documentation/images/general_doc_img/colour_palette.png)
+![Colour Palette](/documentation/images/colour_palette.png)
 </details>
 
 <a></a>

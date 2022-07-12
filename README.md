@@ -459,7 +459,7 @@ These are possible future features to be added to the project which was suggeste
 - [Python3](https://www.python.org/) as a backend programming language
 
 ### **Libraries & Frameworks**
-- [Bootstrap5](https://getbootstrap.com/) for simplify the structure of the website
+- [Bootstrap4](https://getbootstrap.com/) for simplify the structure of the website
 - [Google Fonts](https://fonts.google.com/) for fonts
 - [Font Awesome](https://fontawesome.com/) for icons
 - [Hover.css](https://cdnjs.com/libraries/hover.css/2.1.0) to apply hover effects to the projects navbar.
@@ -713,7 +713,7 @@ ___
     - Home page images from [Pexels](https://www.pexels.com//)
 
 ### **Code**
-- Checkout progress: Original code with modifications from: https://bbbootstrap.com/snippets/bootstrap-5-ecommerce-checkout-form-progress-bar-44177913
+- Checkout progress: Original code with modifications from: https://bbbootstrap.com/snippets/bootstrap-4-ecommerce-checkout-form-progress-bar-44177913
 - Exclude creator field from form https://docs.djangoproject.com/en/3.2/topics/class-based-views/generic-editing/#models-and-request-user
 - For presenting extra content via context: https://docs.djangoproject.com/en/3.2/topics/class-based-views/generic-display/
 - Products app:

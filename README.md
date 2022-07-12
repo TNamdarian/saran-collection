@@ -269,7 +269,7 @@ SQLite, which is Django built-in database is used for development mode and Herok
 <details>
 <summary>Data Structure</summary>
 
-![Data Structure](/documentation/images/general_doc_img/data_structure.png)
+![Data Structure](/documentation/images/data_structure.png)
 </details>
 
 <br>

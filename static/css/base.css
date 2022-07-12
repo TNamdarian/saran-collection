@@ -376,6 +376,7 @@ i.fas.fa-search {
     content: "Bag";
     font-size: 16px;
     padding-left: 15px;
+    color: var(--green);
 }
 
 #step-2-checkout {
@@ -386,6 +387,7 @@ i.fas.fa-search {
     content: "Checkout";
     font-size: 17px;
     font-weight: 700;
+    color: var(--green);
 }
 
 #step-3-checkout::after {
@@ -407,9 +409,10 @@ i.fas.fa-search {
 }
 
 #step-1-success::after {
-    content: "Cart";
+    content: "Bag";
     font-size: 16px;
     padding-left: 15px;
+    color: var(--green);
 }
 
 #step-2-success {
@@ -420,6 +423,7 @@ i.fas.fa-search {
     content: "Checkout";
     font-size: 16px;
     padding-left: 15px;
+    color: var(--green);
 }
 
 #step-3-success {
@@ -439,6 +443,15 @@ i.fas.fa-search {
 
 #success-progresses #success-progess {
     background-color: var(--orange);
+}
+
+/* Chekcout Success Page */
+.smaller-heading {
+    color: var(--green);
+}
+
+.heading-info {
+    color: var(--orange);
 }
 
 /* Product Management Form */

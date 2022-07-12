@@ -21,7 +21,7 @@
 </div>
 <!-- Heading -->
 <div class="container">
-    <div class="row">
+    <div class="row table">
         <div class="col text-center mt-5">
             <h2 class="logo-font">Checkout Success</h2>
             <hr class="w-100 mb-1">
@@ -37,7 +37,7 @@
             <div class="p-2 border">
                 <div class="row">
                     <div class="col">
-                        <h3 class="text-muted">Order Info:</h3>
+                        <h5 class="heading-info">Order Info:</h5>
                     </div>
                 </div>
                 <div class="row">
@@ -58,7 +58,7 @@
                 </div>
                 <div class="row">
                     <div class="col">
-                        <h3 class="text-muted pt-3">Order Details:</h3>
+                        <h5 class="heading-info pt-3">Order Details:</h5>
                     </div>
                 </div>
                 {% for item in order.lineitems.all %}
@@ -75,7 +75,7 @@
                 {% endfor %}
                 <div class="row">
                     <div class="col">
-                        <h3 class="text-muted mt-3">Delivering To:</h3>
+                        <h5 class="heading-info mt-3">Delivering To:</h5>
                     </div>
                 </div>
                 <div class="row">
@@ -150,7 +150,7 @@
                 </div>
                 <div class="row">
                     <div class="col">
-                        <h3 class="text-muted mt-3">Billing Info:</h3>
+                        <h4 class="heading-info mt-3">Billing Info:</h4>
                     </div>
                 </div>
 

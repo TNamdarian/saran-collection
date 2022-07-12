@@ -19,7 +19,6 @@ This project is part of my Code Institute Full Stack Software Development studie
         * [Requirements](#requirements)
         * [Expectations](#expectations)
     * [User Stories](#user-stories)
-    * [User Flow](#user-flow)
     * [Log In Sign Up Flow](#log-in-sign-up-flow)
 * [UI Design](#ui-design) 
     * [Font](#font)
@@ -147,17 +146,6 @@ The overall structure that was used is the [Bootstrap4](https://getbootstrap.com
 
 <br>
 <hr>
-
-### **Site Structure**
-The following site structure was created in [Figjam](https://www.figma.com/figjam/) to determine the pages, subpages and which pages are related.
-
-<details>
-<summary>Site Structure</summary>
-
-![Site Structure](/documentation/images/general_doc_img/site_structure.png)
-</details>
-<br>
-
 
 ### **Wireframe Images**
 #### **Low Fidelity**

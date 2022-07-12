@@ -316,7 +316,7 @@ i.fas.fa-search {
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background-color: var(--lightgrey);
+    background-color: var(--lightgreen);
     z-index: 200;
     position: relative
 }
@@ -358,7 +358,7 @@ i.fas.fa-search {
     width: 100%;
     top: 33px;
     position: absolute;
-    background-color: var(--lightgrey);
+    background-color: var(--white);
     border-radius: 10px
 }
 

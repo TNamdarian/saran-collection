@@ -717,8 +717,14 @@ ___
 - Exclude creator field from form https://docs.djangoproject.com/en/3.2/topics/class-based-views/generic-editing/#models-and-request-user
 - For presenting extra content via context: https://docs.djangoproject.com/en/3.2/topics/class-based-views/generic-display/
 - Products app:
-- User permissions: https://bit.ly/3mSsegO
-- Success message in DeleteView: https://bit.ly/3oRYlzG
+    - User permissions: https://bit.ly/3mSsegO
+    - Success message in DeleteView: https://bit.ly/3oRYlzG
+- Page scroll up javascript feature: Orginal code from with modifications for the project from https://stackoverflow.com/questions/14249998/jquery-back-to-top and https://www.tutorialrepublic.com/faq/how-to-scroll-to-the-top-of-the-page-using-jquery.php 
+- Scroll up button and icon Styling: Orginal code from with modifications for the project from https://www.w3schools.com/howto/howto_js_scroll_to_top.asp
+- Send email functionality:
+    - https://docs.djangoproject.com/en/3.2/topics/email/
+    - https://docs.djangoproject.com/en/3.2/topics/forms/
+    - https://www.youtube.com/watch?v=w4ilq6Zk-08&list=PLXcnmXd-db_hO1v3SLAzVcNieoS_Tcn-6&index=6
 
 ### **Acknowledgements**
 - Thanks to my mentor Guido Cecilio for guiding me throughout this project.

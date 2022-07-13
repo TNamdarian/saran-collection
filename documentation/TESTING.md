@@ -70,21 +70,21 @@ ___
 
 
 <details>
-<summary>Shop: Shipping</summary>
+<summary>Shipping</summary>
 
-![Shop: Pagination](/documentation/images/shipping.png)
+![Shipping](/documentation/images/shipping.png)
 </details>
 
 <details>
 <summary>Size Charts</summary>
 
-![Coffee Corner](/documentation/images/size_charts.png)
+![Size Charts](/documentation/images/size_charts.png)
 </details>
 
 <details>
 <summary>Returns</summary>
 
-![About App](/documentation/images/returns_app.png)
+![Returns](/documentation/images/returns_app.png)
 </details>
 
 <details>

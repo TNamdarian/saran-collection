@@ -9,7 +9,7 @@
         <div class="col-lg-6">
             <form method="GET" action="{% url 'products' %}">
                 <div class="input-group input-group-lg">
-                    <input type="text" class="form-control" name="q" placeholder="Search our store" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+                    <input type="text" class="form-control" name="q" placeholder="Search our store" aria-label="Large" aria-describedby="iform-control">
                     <div class="input-group-append">
                         <button class="form-control btn search-btn rounded-2" type="submit" aria-label="Search button">
                             <span>
@@ -76,7 +76,6 @@
                 <div class="card-body">
                     <!-- product name -->
                     <div class="product-name text-center">
-                        <h4 class="text-primary"></h4>
                         <p class="text-secondary">{{ product.name }}</p>
                     </div>
                     <div class="row py-2 text-secondary">

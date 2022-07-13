@@ -4,7 +4,7 @@ This project is part of my Code Institute Full Stack Software Development studie
 
 [View live version of website via Heroku](https://saran-collection.herokuapp.com/)
 
-![Mockup image](/documentation/images/general_doc_img/mockup.png)
+![Mockup image](/documentation/images/mockup.png)
 
 <br>
 <hr>

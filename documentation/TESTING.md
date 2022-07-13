@@ -170,6 +170,12 @@ ___
 - To validate the CSS code of the project pasting code in by direct input method.
 - All issues were resolved.
 
+<details>
+<summary>CSS validation</summary>
+
+![CSS Validation](/documentation/images/css_validated.png)
+</details>
+
 <br>
 
 ### [HTML: W3C Markup Validation](https://validator.w3.org/)
@@ -193,7 +199,7 @@ ___
 <br>
 
 ### Browser Compatibility
-To ensure a broad range of users can successfully use this site, I tested it across the 4 major browsers in both desktop and mobile configuration. See the Browser Compatibility Table below for more detail. The following browsers were tested:
+To ensure a broad range of users can successfully use this site, I tested it across the 4 major browsers in both desktop and mobile configuration. The following browsers were tested:
 - Chrome
 - Firefox 
 - Safari

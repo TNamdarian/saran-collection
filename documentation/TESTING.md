@@ -84,7 +84,7 @@ ___
 <details>
 <summary>Returns</summary>
 
-![Returns](/documentation/images/returns_app.png)
+![Returns](/documentation/images/returns.png)
 </details>
 
 <details>

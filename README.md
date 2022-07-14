@@ -445,6 +445,7 @@ These are possible future features to be added to the project which was suggeste
 - Add a blog and tips on how to style. 
 - The user can change their password and email from their profile if they click on a Change password button. A modal will pop up and ask for the new password. If they confirm to change their password, their password will be updated in the database under the Users collection.
 - I would like to have custom helper text for all forms on the site. Currently, the forms have crispy and Django feedback to users which could frustrate them as they only receive feedback if the fields were filled in incorrectly. After user research, it is clear that users want to know what is expected of them before they enter information in the input fields. As a temporary measure to solve user frustration, I added helper text at the bottom of the register form to guide the user at least what is expected of them.
+- The sizes on products details have been added via html. However, I'd like to add sizes dynamically via backend data so the availability of the sizes could be rendered at the frontend and the admin user could add sizes on the admin page individually. Due to lack of time and getting closer to the deadline, I didn't manage to study how to do it yet. 
 
 <br>
 <hr>

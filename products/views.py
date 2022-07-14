@@ -1,16 +1,16 @@
 from django.shortcuts import render, reverse, redirect, get_object_or_404
 from django.contrib import messages
-from .models import Product, Category
 from django.db.models import Q
-from .forms import ProductForm
-from django.contrib.auth.decorators import login_required
 from django.db.models.functions import Lower
+from django.contrib.auth.decorators import login_required
 from django.urls import reverse_lazy
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.views.generic import (
     DeleteView,
 )
+from .models import Product, Category
+from .forms import ProductForm
 
 
 def all_products(request):
@@ -22,7 +22,7 @@ def all_products(request):
     categories = None
     sort = None
     direction = None
-    
+
     if request.GET:
         if 'sort' in request.GET:
             sortkey = request.GET['sort']
@@ -42,11 +42,12 @@ def all_products(request):
             categories = request.GET['category'].split(',')
             products = products.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
-            
+
         if 'q' in request. GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "You didn't enter any search ceriteria!")
+                messages.error(request,
+                               "You didn't enter any search ceriteria!")
                 return redirect(reverse('products'))
 
             queries = (Q(name__icontains=query) |
@@ -75,7 +76,7 @@ def product_detail(request, product_id):
 
     context = {
         'product': product,
-        'category' : product.category
+        'category': product.category
     }
 
     return render(request, 'products/product_detail.html', context)
@@ -132,7 +133,6 @@ def edit_product(request, product_id):
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing {product.name}')
-        
     template = 'products/edit_product.html'
     context = {
         'form': form,

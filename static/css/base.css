@@ -214,7 +214,7 @@ a.nav-link {
     color: var(--green) !important;
 }
 
-button:focus {
+button.navbar-toggler:focus {
     outline: 1px dotted;
 }
 

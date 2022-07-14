@@ -180,7 +180,13 @@ ___
 
 ### [HTML: W3C Markup Validation](https://validator.w3.org/)
 - To validate the HTML code of the project by pasting code in by direct input method. Note the W3C Validator for HTML does not understand the Jinja templating syntax therefore if there are warnings related to this, this can be safely ignored.
-- All issues were resolved except for 2 errors relating to Django crispy forms (see image below for more detail)
+- All issues were resolved except for 2 errors relating to Django crispy forms (see image below for more detail).
+
+<details>
+<summary>HTML validation</summary>
+
+![HTML Validation](/documentation/images/html_validated.png)
+</details>
 
 <br>
     

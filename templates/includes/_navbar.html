@@ -15,7 +15,8 @@
                     <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
                         <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
                         <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
-                        <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
+                        <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">By
+                            Category</a>
                         <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
                     </div>
                 </li>
@@ -40,7 +41,8 @@
                         <a href="{% url 'products' %}?category=shirts" class="dropdown-item">Shirts</a>
                         <a href="{% url 'products' %}?category=belts" class="dropdown-item">Belts</a>
                         <a href="{% url 'products' %}?category=menshoes" class="dropdown-item">Shoes</a>
-                        <a href="{% url 'products' %}?category=suits,shirts,belts,menshoes" class="dropdown-item">All Men</a>
+                        <a href="{% url 'products' %}?category=suits,shirts,belts,menshoes" class="dropdown-item">All
+                            Men</a>
                     </div>
                 </li>
             </ul>
@@ -64,6 +66,7 @@
                         </div>
                     </div>
                 </li>
+            </ul>
         </div>
         <div class="list-inline-item">
             <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">

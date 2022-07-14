@@ -1,18 +1,20 @@
+import json
+import time
+
 from django.http import HttpResponse
 from django.core.mail import send_mail
 from django.template.loader import render_to_string
 from django.conf import settings
 
-from .models import Order, OrderLineItem
 from products.models import Product
 from profiles.models import UserProfile
-
-import json
-import time
+from .models import Order, OrderLineItem
 
 
-class StripeWH_Handler:
-    """Handle Stripe webhooks"""
+class StripeWebHookHandler:
+    """
+    Handle Stripe webhooks
+    """
 
     def __init__(self, request):
         self.request = request
@@ -143,11 +145,11 @@ class StripeWH_Handler:
                                 product_size=size,
                             )
                             order_line_item.save()
-            except Exception as e:
+            except Exception as error:
                 if order:
                     order.delete()
                 return HttpResponse(
-                    content=f'Webhook received: {event["type"]} | ERROR: {e}',
+                    content=f'Webhook received: {event["type"]} | ERROR: {error}',
                     status=500)
         self._send_confirmation_email(order)
         return HttpResponse(

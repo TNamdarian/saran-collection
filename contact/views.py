@@ -18,16 +18,16 @@ def contact(request):
     if request.method == 'POST':
         contact_form = ContactForm(request.POST)
         if contact_form.is_valid():
-            input_email = contact_form.cleaned_data['input_email']
-            input_name = contact_form.cleaned_data['input_name']
-            input_message = contact_form.cleaned_data['input_message']
+            email = contact_form.cleaned_data['email']
+            name = contact_form.cleaned_data['name']
+            message = contact_form.cleaned_data['message']
 
             try:
                 # Sending an email
                 send_mail(
-                    f'Message from {input_name}',  # Subject
-                    input_message,  # Message
-                    input_email,  # From Email
+                    f'Message from {name}',  # Subject
+                    message,  # Message
+                    email,  # From Email
                     [settings.DEFAULT_FROM_EMAIL],  # To email
                     fail_silently=False,  # Raise SMTPException if send fails
                 )
@@ -36,7 +36,7 @@ def contact(request):
                 # and redirecting user back to contact page
                 messages.success(
                     request,
-                    f'Thank you {input_name}, your email has been sent to us!')
+                    f'Thank you {name}, your email has been sent to us!')
                 return HttpResponseRedirect('/contact/')
 
             # Preventing malicious injections of to or from values
@@ -54,9 +54,9 @@ def contact(request):
     else:
         # Inserting a logged in user's saved email into the contact form
         if request.user.is_authenticated:
-            input_email = request.user.email
+            email = request.user.email
             contact_form = ContactForm(
-                initial={'input_email': request.user.email}
+                initial={'email': request.user.email}
             )
         else:
             contact_form = ContactForm()

@@ -110,8 +110,6 @@ This website project will target users who are interested in purchasing fashion 
 1. to have the ability to log in to an admin account so that I can add, edit and delete products to the database;
 2. to have an environment to view all users, products and manage other information of the e-commerce store;
 
-
-
 <br>
 <hr>
 

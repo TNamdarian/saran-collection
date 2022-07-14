@@ -214,6 +214,10 @@ a.nav-link {
     color: var(--green) !important;
 }
 
+button:focus {
+    outline: 1px dotted;
+}
+
 a.nav-link:hover {
     color: var(--white) !important;
 }

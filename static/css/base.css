@@ -197,6 +197,7 @@ li a:hover {
 
 .sizing {
     margin-bottom: 30px;
+    width: 100%;
 }
 
 /* Returns Page */
@@ -635,7 +636,6 @@ p.info {
 @media screen and (max-width: 414px) {
     .shop-now-button {
         min-width: 160px;
-        border-radius: 8px;
         font-size: 14px;
         position: relative;
         right: 50px;

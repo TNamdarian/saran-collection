@@ -137,7 +137,8 @@ class StripeWebHookHandler:
                         )
                         order_line_item.save()
                     else:
-                        for size, quantity in item_data['items_by_size'].items():
+                        for size, quantity in item_data['items_by_size'].items(
+                        ):
                             order_line_item = OrderLineItem(
                                 order=order,
                                 product=product,
@@ -149,7 +150,8 @@ class StripeWebHookHandler:
                 if order:
                     order.delete()
                 return HttpResponse(
-                    content=f'Webhook received: {event["type"]} | ERROR: {error}',
+                    content=f'Webhook received: {event["type"]} | '
+                    f'ERROR: {error}',
                     status=500)
         self._send_confirmation_email(order)
         return HttpResponse(

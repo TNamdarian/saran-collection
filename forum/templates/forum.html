@@ -1,0 +1,121 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col">
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <!-- Heading -->
+    <div class="row pb-4">
+        <div class="col text-center mt-3">
+            <h2 class="logo-font">The Coffee Forum</h2>
+            <hr class="w-100 mb-1">
+        </div>
+    </div>
+</div>
+<!-- Intro section -->
+<section class="container">
+    <div class="row">
+        <div class="col-12 col-md-5">
+            <img src="{% static 'images/signup.png' %}" alt="Coffee, book, pen and keyboard on table" class="block-img" height="400">
+        </div>
+        <div class="col-12 col-md-7 mt-3">
+            <h3 class="block">Discuss Topics on Coffee</h3>
+            <p>To discuss all things coffee-related! Here you can ask for tips, discuss recipes, share resources and give your reviews on certain coffees. We created a space so that everyone can connect and learn from each other.</p>
+            <p>You can either start a new thread or add a comment to one of the existing Threads by clicking on the title of the thread.</p>
+        </div>
+    </div>
+    <hr class="w-100 mb-1">
+</section>
+<!--Thread section-->
+<main class="container mb-5 mt-5">
+    <div class="row">
+        <!--Create Button-->
+        <div class="col-12">
+            <p class="d-flex justify-content-center">
+                <a class="btn action-btn" href="{% url 'add_thread' %}">Create a New Thread
+                    <i class="fas fa-plus ps-1"></i>
+                </a>
+            </p>
+        </div>
+    </div>
+    <!-- Original code with modifications from: https://www.youtube.com/watch?v=6SkoqRJ-yAw&list=PLMXItuyqfZ94JEmU4KWcbPepKLAK2KGDb&index=9 -->
+    <!-- Treads (newest thread at top)-->
+    {% for thread in page_obj %}
+    <div class="row thread mt-2 mb-2">
+        <div class="col-md-6 col-md-6 pt-2">
+            <strong><a class="link-text uppercase" href="{% url 'thread' thread.pk %} ">{{ thread.title }}</a></strong>
+            <p>By {{ thread.creator }} on {{ thread.date_created }}</p>
+        </div>
+        <div class="col-md-2 mt-2">
+            {% if thread.comments.all.count == 1 %}
+            <p>1 <span class="forum-small-show"> comment</span></p>
+            {% else %}
+            <p>{{ thread.comments.all.count }} <span class="forum-small-show"> comments</span></p>
+            {% endif %}
+        </div>
+        <div class="col-md-4 mt-2">
+            {% if thread.comments.all %}
+            <p><span class="forum-small-show">Last comment by: </span><span class="forum-small-hide">By</span>
+                {{ thread.comments.last.creator }} ({{ thread.comments.last.date_created }})</p>
+            {% else %}
+            <p class="forum-small-hide">No comments yet</p>
+            {% endif %}
+        </div>
+    </div>
+    {% endfor %}
+    <!-- Pagination from Bootstrap and Django Documentation -->
+    <nav aria-label="Page navigation">
+        <ul class="pagination  justify-content-center">
+            {% if page_obj.has_previous %}
+            <li class="page-item"> <a class="page-link link-text" href="?page=1">&laquo; first</a></li>
+            <li class="page-item"> <a class="page-link link-text" href="?page={{ page_obj.previous_page_number }}">previous</a></li>
+            {% endif %}
+            <li class="page-item disabled">
+                <span class="current page-link link-text">
+                    Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+                </span>
+            </li>
+            {% if page_obj.has_next %}
+            <li class="page-item"> <a class="page-link link-text" href="?page={{ page_obj.next_page_number }}">next</a>
+            </li>
+            <li class="page-item"> <a class="page-link link-text" href="?page={{ page_obj.paginator.num_pages }}">last
+                    &raquo;</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+</main>
+<!-- Scroll up button -->
+<button id="scrollButton" title="Go to top">
+    <i class="fas fa-angle-double-up scrollup-arrow"></i>
+</button>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+<script>
+    // Page scroll up feature
+    /* Orginal code from with modifications for project:
+     https://stackoverflow.com/questions/14249998/jquery-back-to-top and https://www.tutorialrepublic.com/faq/how-to-scroll-to-the-top-of-the-page-using-jquery.php */
+    $(window).scroll(function() {
+        if ($(this).scrollTop()) {
+            $('#scrollButton').fadeIn();
+        } else {
+            $('#scrollButton').fadeOut();
+        }
+    });
+
+    $("#scrollButton").click(function() {
+        $("html, body").animate({
+            scrollTop: 0
+        }, "fast");
+    });
+</script>
+{% endblock %}

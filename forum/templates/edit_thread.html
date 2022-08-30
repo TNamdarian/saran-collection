@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col">
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<main class="container" style="height: 100vh;">
+    <!-- Heading -->
+    <div class="row pb-4">
+        <div class="col text-center mt-3">
+            <h2 class="logo-font">Edit Thread</h2>
+            <hr class="w-100 mb-1">
+        </div>
+    </div>
+    <!-- Form -->
+    <div class="row">
+        <div class="col">
+            <form method="POST">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <div class="mt-2 mb-2 d-flex justify-content-end ">
+                    <a class="btn alt-action-btn" href="{% url 'thread' thread.pk %}">Cancel</a>
+                    <button class="btn action-btn ms-2" type="submit">Update Thread</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
+{% endblock %}

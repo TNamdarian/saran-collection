@@ -732,3 +732,43 @@ p.info {
 .card-img-top .img-fluid img {
     height: 300px;
 }
+
+/* Blog */
+
+.blog-img {
+    width: 50%;
+}
+
+.card-blog {
+    padding: 2rem 2rem;
+    border: .02rem solid #6D564D;
+    border-radius: .2rem;
+    -webkit-box-shadow: .08rem .08rem .12rem .12rem #a08d86;
+    box-shadow: .08rem .08rem .12rem .12rem #a08d86;
+    position: relative;
+}
+
+.edit-blogpost-link {
+    float: left;
+    margin-left: 1rem;
+}
+
+.delete-blogpost-link {
+    float: right;
+    margin-right: 1rem;
+}
+
+.submit-btn a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.delete-confirm-legend {
+    font-size: 1.2rem;
+}
+
+.back-from-search {
+    color: #6D564D;
+    position: absolute;
+    left: 2rem;
+}

@@ -736,7 +736,7 @@ p.info {
 /* Blog */
 
 .blog-img {
-    width: 50%;
+    width: 100%;
 }
 
 .card-blog {
@@ -771,4 +771,5 @@ p.info {
     color: #6D564D;
     position: absolute;
     left: 2rem;
+    margin-left: 50px;
 }

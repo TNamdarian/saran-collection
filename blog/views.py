@@ -25,7 +25,7 @@ def blog(request):
         # entering search criteria
         if not query:
             messages.error(request, "No search qriteria entered")
-            return redirect(reverse('blogposts'))
+            return redirect(reverse('blog'))
         # Taking in the search criteria and filtering by them
         queries = Q(
                 title__icontains=query) | Q(content__icontains=query)

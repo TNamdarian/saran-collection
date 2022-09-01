@@ -57,7 +57,6 @@ INSTALLED_APPS = [
     'sizing',
     'crispy_forms',
     'storages',
-    'forum',
 ]
 
 MIDDLEWARE = [

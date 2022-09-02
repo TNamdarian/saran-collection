@@ -136,6 +136,36 @@ ___
 ![Delete Product](/documentation/images/delete_product.png)
 </details>
 
+<details>
+<summary>Blog</summary>
+
+![Blog](/documentation/images/blog.png)
+</details>
+
+<details>
+<summary>Blogpost Details</summary>
+
+![Blogpost Details](/documentation/images/blog_details.png)
+</details>
+
+<details>
+<summary>Add Blogpost</summary>
+
+![Add Blogpost](/documentation/images/add_blogpost.png)
+</details>
+
+<details>
+<summary>Edit blogpost</summary>
+
+![Edit Blogpost](/documentation/images/edit_blogpost.png)
+</details>
+
+<details>
+<summary>Delete blogpost</summary>
+
+![Delete Blogpost](/documentation/images/delete_blog.png)
+</details>
+
 <br>
 <hr>
 

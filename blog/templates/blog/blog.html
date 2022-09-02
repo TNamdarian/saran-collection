@@ -35,14 +35,11 @@
 </div>
 <!-- Decorative image showing on xl screens and up -->
 <div class="row align-items-center justify-content-center">
-    <div class="d-none d-xl-block col-xl-2 mt-3">
-        <img src="{{ MEDIA_URL }}garibay.jpg" class="blog-img" alt="two girls running towards the bushes">
-    </div>
-    <div class="col-12 col-xl-8 my-3 offset-xl-1 mt-3">
-        <h4 class=" my-3">Learn more about fashion and trendy styles here.</h4>
+    <div class="col-8 mt-3">
+        <h4 class="heading my-3 text-center">Learn more about fashion and trendy styles here.</h4>
         <!-- Displaying blog posts -->
         {% for blogpost in blogposts %}
-        <div class="card-blog my-5 bg-white">
+        <div class=" card-blog my-5 bg-white">
             <h5>{{ blogpost.title }}</h5>
             <p>{{ blogpost.content }}</p>
             <a class="submit-btn rounded-pill" href="{% url 'blog_details' blogpost.id %}">Read and
@@ -50,8 +47,8 @@
             {% if request.user.is_superuser %}
             <div class="my-3">
                 <!-- Functionality of editing and deleting blog posts, only showing if the user is logged in with superuser credentials -->
-                <span class="edit-blogpost-link bg-white text-left"><a class="bg-white text-secondary" href="{% url 'edit_blogpost' blogpost.id %}">Edit</a></span>
-                <span class="delete-blogpost-link text-right"><a class="bg-white text-secondary" href="{% url 'confirm_delete_blogpost' blogpost.id %}">Delete</a></span>
+                <span class="edit-blogpost-link bg-white text-left"><a class="bg-white" href="{% url 'edit_blogpost' blogpost.id %}">Edit</a></span>
+                <span class="delete-blogpost-link text-right"><a class="bg-white" href="{% url 'confirm_delete_blogpost' blogpost.id %}">Delete</a></span>
             </div>
             {% endif %}
         </div>

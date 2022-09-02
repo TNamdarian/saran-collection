@@ -734,16 +734,11 @@ p.info {
 }
 
 /* Blog */
-
-.blog-img {
-    width: 100%;
-}
-
 .card-blog {
     padding: 2rem 2rem;
-    border: .02rem solid #6D564D;
+    border: .02rem solid var(--orange);
     border-radius: .2rem;
-    -webkit-box-shadow: .08rem .08rem .12rem .12rem #a08d86;
+    -webkit-box-shadow: .08rem .08rem .12rem .12rem #f0cf79;
     box-shadow: .08rem .08rem .12rem .12rem #a08d86;
     position: relative;
 }
@@ -765,6 +760,7 @@ p.info {
 
 .delete-confirm-legend {
     font-size: 1.2rem;
+    font-weight: bold;
 }
 
 .back-from-search {
@@ -772,4 +768,65 @@ p.info {
     position: absolute;
     left: 2rem;
     margin-left: 50px;
+}
+
+a.bg-white {
+    color: var(--green);
+}
+
+a.bg-white:hover {
+    color: var(--pink);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.submit-btn {
+    color: var(--orange);
+}
+
+.submit-btn:hover {
+    color: var(--green);
+    text-decoration: none;
+}
+
+.heading {
+    color: var(--green);
+}
+
+.delete-submit-btn,
+.edit-submit-btn,
+.add-submit-btn {
+    color: var(--orange);
+    background-color: var(--green);
+    border: var(--green);
+    font-weight: bold;
+}
+
+.delete-submit-btn:hover,
+.edit-submit-btn:hover,
+.add-submit-btn:hover {
+    color: var(--green);
+    background-color: var(--orange);
+    border: var(--orange);
+    font-weight: bold;
+}
+
+a.cancel {
+    color: var(--green);
+    font-weight: bold;
+}
+
+a.cancel:hover {
+    color: var(--orange);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a.float-start {
+    color: var(--green);
+}
+
+a.float-start:hover {
+    color: var(--orange);
+    text-decoration: none;
 }

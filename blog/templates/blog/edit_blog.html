@@ -2,8 +2,16 @@
 {% load static %}
 
 {% block content %}
+<!-- Heading -->
+<div class="container">
+    <div class="row">
+        <div class="col text-center mt-5">
+            <h3 class="text-center mb-3 showcase">Edit Blog.</h3>
+            <hr class="w-100 mb-1">
+        </div>
+    </div>
+</div>
 <div class="container form-container-wrapper bg-leaves">
-    <h3>Edit Blogpost</h3>
     <div class="row justify-content-center">
         <div class="col-12 col-lg-6 col-xl-5 mt-5 ">
             <!-- Form for editing a blogpost-->
@@ -16,8 +24,8 @@
                 {{ field }}
                 {% endif %}
                 {% endfor %}
-                <a href="{% url 'blog' %}" class="mx-3 my-5">Cancel</a>
-                <button class="primaryAction rounded-pill submit-btn px-3 py-1 my-5 mx-2" type="submit">Update blogpost </button>
+                <a href="{% url 'blog' %}" class="mx-3 my-5 cancel">Cancel</a>
+                <button class="primaryAction rounded-pill edit-submit-btn mb-5 px-3 py-1 my-5 mx-2" type="submit">Update blogpost </button>
             </form>
         </div>
     </div>

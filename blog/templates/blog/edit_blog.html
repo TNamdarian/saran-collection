@@ -11,9 +11,9 @@
         </div>
     </div>
 </div>
-<div class="container form-container-wrapper bg-leaves">
+<div class="container page-wrapper bg-leaves">
     <div class="row justify-content-center">
-        <div class="col-12 col-lg-6 col-xl-5 mt-5 ">
+        <div class="col-8 mt-5 table">
             <!-- Form for editing a blogpost-->
             <form action="{% url 'edit_blogpost' blogpost.id %}" method="POST" enctype="multipart/form-data" class="site-form">
                 {% csrf_token %}
@@ -24,8 +24,8 @@
                 {{ field }}
                 {% endif %}
                 {% endfor %}
-                <a href="{% url 'blog' %}" class="mx-3 my-5 cancel">Cancel</a>
-                <button class="primaryAction rounded-pill edit-submit-btn mb-5 px-3 py-1 my-5 mx-2" type="submit">Update blogpost </button>
+                <a class="btn alt-action-btn mb-5" href="{% url 'blog' %} class=">Cancel</a>
+                <button class="btn action-btn mb-5" type="submit">Update blogpost </button>
             </form>
         </div>
     </div>

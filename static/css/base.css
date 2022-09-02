@@ -675,7 +675,7 @@ p.info {
 
 .action-btn {
     background: var(--green);
-    color: var(--pink);
+    color: var(--orange);
     min-width: fit-content;
     border-radius: 8px;
     margin: 10px;
@@ -764,10 +764,15 @@ p.info {
 }
 
 .back-from-search {
-    color: #6D564D;
+    color: var(--green);
     position: absolute;
     left: 2rem;
     margin-left: 50px;
+}
+
+.back-from-search:hover {
+    color: var(--orange);
+    text-decoration: none;
 }
 
 a.bg-white {
@@ -793,37 +798,9 @@ a.bg-white:hover {
     color: var(--green);
 }
 
-.delete-submit-btn,
-.edit-submit-btn,
-.add-submit-btn {
-    color: var(--orange);
-    background-color: var(--green);
-    border: var(--green);
-    font-weight: bold;
-}
-
-.delete-submit-btn:hover,
-.edit-submit-btn:hover,
-.add-submit-btn:hover {
-    color: var(--green);
-    background-color: var(--orange);
-    border: var(--orange);
-    font-weight: bold;
-}
-
-a.cancel {
-    color: var(--green);
-    font-weight: bold;
-}
-
-a.cancel:hover {
-    color: var(--orange);
-    text-decoration: none;
-    font-weight: bold;
-}
-
 a.float-start {
     color: var(--green);
+    margin-bottom: 30px;
 }
 
 a.float-start:hover {

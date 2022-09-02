@@ -13,7 +13,7 @@
 </div>
 <div class="container page-wrapper bg-leaves">
     <div class="row justify-content-center">
-        <div class="col-12 col-lg-6 col-xl-5 mt-5">
+        <div class="col-8 mt-5 table">
             <!-- Form for adding a blogpost to the db -->
             <form action="{% url 'add_blogpost' %}" method="POST" enctype="multipart/form-data" class="site-form">
                 {% csrf_token %}
@@ -24,8 +24,8 @@
                 {{ field }}
                 {% endif %}
                 {% endfor %}
-                <a href="{% url 'blog' %} class=" class="mx-3 my-5 cancel">Cancel</a>
-                <button class="primaryAction rounded-pill add-submit-btn px-3 py-1 my-2 mb-5" type="submit">Add a blogpost </button>
+                <a class="btn alt-action-btn mb-5" href="{% url 'blog' %} class=">Cancel</a>
+                <button class="btn action-btn mb-5" type="submit">Add a blogpost </button>
             </form>
         </div>
     </div>

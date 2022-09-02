@@ -1,6 +1,7 @@
+from django.db.models import Q
 from .models import BlogPost, BlogComment
 from .forms import BlogpostForm, BlogCommentForm
-from django.db.models import Q
+
 
 from django.shortcuts import (render, redirect,
                               reverse, get_object_or_404)

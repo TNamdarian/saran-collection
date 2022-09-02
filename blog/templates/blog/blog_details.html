@@ -28,7 +28,7 @@
                 <form method="POST" class="mx-auto mw-100">
                     {{ comment_form | crispy }}
                     {% csrf_token %}
-                    <input type="submit" class="rounded-pill mx-2 add-submit-btn py-1 px-3 mb-3" value="Add comment">
+                    <input type="submit" class="btn action-btn mb-5" value="Add comment">
                     <input type="hidden" name="redirect_url" value="{{ request.path }}">
                     <p>* = required field</p>
                 </form>
@@ -43,7 +43,7 @@
         </div>
     </div>
     <div>
-        <a class="float-start ml-5 mb-5" href="{% url 'blog' %}"><span class="icon"><i class="fas fa-arrow-left">
+        <a class="float-start ml-5" href="{% url 'blog' %}"><span class="icon"><i class="fas fa-arrow-left">
                 </i></span><strong> Back to blogposts</strong></a>
     </div>
 </div>

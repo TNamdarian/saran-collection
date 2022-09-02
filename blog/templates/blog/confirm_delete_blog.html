@@ -19,8 +19,8 @@
             <form action="{% url 'delete_blogpost' blogpost.id %}" method="POST" enctype="multipart/form-data" class="site-form">
                 {% csrf_token %}
                 <legend class="mx-auto mb-5 mt-2 delete-confirm-legend heading">Are you sure you want to delete blogpost "{{ blogpost.title }}" ?</legend>
-                <a href="{% url 'blog' %}" class="mx-3 my-5 cancel">Cancel</a>
-                <button class="primaryAction rounded-pill delete-submit-btn px-3 py-1 my-5 mx-2" type="submit">Delete blogpost </button>
+                <a href="{% url 'blog' %}" class="btn alt-action-btn mb-5">Cancel</a>
+                <button class="btn action-btn mb-5" type="submit">Delete blogpost </button>
             </form>
         </div>
     </div>

@@ -380,25 +380,25 @@ SQLite, which is Django built-in database is used for development mode and Herok
 - If the user is an administrator, they will see the option to delete a product.
 - If they click it, they will be presented with a confirmation screen and then if they click delete, they can delete the product and the database will be updated.
 
-### Blog page - for admin users
+### Blog page - (blog.html) for admin users
 - The blog page contains a list of blog posts shown in the order of most recently added. The page also has a search box above the blog post where the user can search for a blog post either by title or by a word in the content. 
 - Each blogpost has a "read more"-link that when clicked takes the user to the blog details page. 
 - For a signed in superuser, there are also two additional links on each blogpost. One for editing, that takes the superuser to an edit blogpost page, and one for delete that takes the superuser for a confirm deletion page.
 
-### Blog details page - for admin users
+### Blog details page - (blog_details.html) for admin users
 - The blog details page contains the entire text content of the blogpost shown, and if the user is signed in to their account a button saying "comment blogpost" is shown. 
 - If the user is not signed in, a text informing the user that they has to be signed in to comment is shown instead, along with a link to the login page and a link to the sign up-page to make it easy for the user to login or to create an account if they doesn't have one.
 
-### Add blog page - for admin users
+### Add blog page - (add_blogpost.html) for admin users
 - This page is only available for superuser, and is accessed from the navigation bar (where it is only showed for signed in superuser). 
 - This page contains a form where the superuser can fill in title and content and add a blogpost to the database by clicking "add blogpost". 
 - The page also contains a "cancel"-link that leads back to the blogs-page when clicked.
 
-### Edit blog page - for admin users
+### Edit blog page - (edit_blog.html) for admin users
 - This page is only available for superuser, and is accessed from the navigation bar (where it is only showed for signed in superuser). - This page contains a form where the superuser can edit title and content and update a blogpost in the database by clicking "edit blogpost". 
 - The page also contains a "cancel"-link that leads back to the blogs-page when clicked.
 
-### Confirm deletion page - for admin users
+### Confirm deletion page - (confirm_delete_blog.html) for admin users
 - This page is shown when superuser clicks the "delete"-link on a blogpost on the blog page. 
 - This page only contains a question "Are you sure you want to delete (title of the blogpost) ? and the choices yes or no. Clicking no takes the user back the blogs page and clicking yes deletes the toy from the database.
 

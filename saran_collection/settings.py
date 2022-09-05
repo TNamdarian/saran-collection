@@ -13,7 +13,6 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 import os
 import dj_database_url
-development = os.environ.get('DEVELOPMENT', False)
 
 if os.path.isfile("env.py"):
     import env
@@ -128,7 +127,7 @@ WSGI_APPLICATION = 'saran_collection.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-if development:
+if 'DATABASE_URL' in os.environ:
     DATABASES = {
         'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }

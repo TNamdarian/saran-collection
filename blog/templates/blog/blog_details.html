@@ -35,8 +35,8 @@
                 {% else %}
                 <!-- Links to login and signup pages, shown if user is not logged in -->
                 <p>You have to be signed in to leave a comment. </p>
-                <p> <a href="{% url 'account_login' %} ">Sign in here</a> <br>
-                    <a href="{% url 'account_signup' %} ">Sign up for an account here</a>
+                <p> <a class="link-text" href="{% url 'account_login' %}">Sign in here</a> <br>
+                    <a class="link-text" href="{% url 'account_signup' %}">Sign up for an account here</a>
                 </p>
                 {% endif %}
             </div>

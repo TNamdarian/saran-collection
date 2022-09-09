@@ -252,6 +252,36 @@ The overall structure that was used is the [Bootstrap4](https://getbootstrap.com
 ![Wireframe: Delete Products](/documentation/wireframes/wireframe_delete_product.png)
 </details>
 
+<details>
+<summary>Blog Page  (blog.html) - for admin users</summary>
+
+![Wireframe: Blog](/documentation/wireframes/wireframe_blog.png)
+</details>
+
+<details>
+<summary>Add a Blogpost (add_blogpost.html) - for admin users</summary>
+
+![Wireframe: Blog](/documentation/wireframes/wireframe_add_blog.png)
+</details>
+
+<details>
+<summary>Edit a Blogpost (edit_blog.html) - for admin users</summary>
+
+![Wireframe: Blog](/documentation/wireframes/wireframe_edit_blog.png)
+</details>
+
+<details>
+<summary>Blog Details (blog_details.html) - for admin users</summary>
+
+![Wireframe: Blog](/documentation/wireframes/wireframe_blog_details.png)
+</details>
+
+<details>
+<summary>Delete Blog Page  (confirm_delete_blog.html) - for admin users</summary>
+
+![Wireframe: Delete a Blog](/documentation/wireframes/wireframe_delete_blog.png)
+</details>
+
 <br>
 <hr>
 

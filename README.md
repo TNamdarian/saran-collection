@@ -540,6 +540,7 @@ These are possible future features to be added to the project which was suggeste
 - [PEP8 Online](http://pep8online.com/) for checking Python code syntax
 - [Grammerly](https://www.grammarly.com/) to check spelling & grammer
 - [Notion](https://www.notion.so) for project planning and tracking
+- [Datagrip](https://www.jetbrains.com/datagrip/?source=google&medium=cpc&campaign=15034927837&term=datagrip&gclid=Cj0KCQjw6_CYBhDjARIsABnuSzp0LpwQpmCHmvcBxdM9YTyefXuJn_rgE3zlOPdBMWTi9vvJv_mzOHIaAiUeEALw_wcB) to print out the data strucutre 
 
 ### **Design**
 - [Balsamiq](https://balsamiq.com/) to design low fidelity mockups
